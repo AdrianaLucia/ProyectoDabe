@@ -46,12 +46,21 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.textBoxIdActividad = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxDia
             // 
             this.comboBoxDia.FormattingEnabled = true;
+            this.comboBoxDia.Items.AddRange(new object[] {
+            "Lunes",
+            "Martes",
+            "Miercoles",
+            "Jueves",
+            "Viernes",
+            "Sabado",
+            "Domingo"});
             this.comboBoxDia.Location = new System.Drawing.Point(14, 237);
             this.comboBoxDia.Name = "comboBoxDia";
             this.comboBoxDia.Size = new System.Drawing.Size(121, 21);
@@ -65,6 +74,8 @@
             this.dataGridViewActividades.Name = "dataGridViewActividades";
             this.dataGridViewActividades.Size = new System.Drawing.Size(418, 206);
             this.dataGridViewActividades.TabIndex = 27;
+            this.dataGridViewActividades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActividades_CellContentClick);
+            this.dataGridViewActividades.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActividades_RowEnter);
             // 
             // comboBoxTipo
             // 
@@ -128,29 +139,31 @@
             // buttonEliminar
             // 
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.Location = new System.Drawing.Point(368, 379);
+            this.buttonEliminar.Location = new System.Drawing.Point(520, 383);
             this.buttonEliminar.Name = "buttonEliminar";
-            this.buttonEliminar.Size = new System.Drawing.Size(85, 30);
+            this.buttonEliminar.Size = new System.Drawing.Size(136, 30);
             this.buttonEliminar.TabIndex = 31;
             this.buttonEliminar.Text = "Eliminar";
             this.buttonEliminar.UseVisualStyleBackColor = true;
+            this.buttonEliminar.Click += new System.EventHandler(this.buttonEliminar_Click);
             // 
             // buttonModificar
             // 
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(368, 330);
+            this.buttonModificar.Location = new System.Drawing.Point(520, 340);
             this.buttonModificar.Name = "buttonModificar";
-            this.buttonModificar.Size = new System.Drawing.Size(85, 30);
+            this.buttonModificar.Size = new System.Drawing.Size(136, 30);
             this.buttonModificar.TabIndex = 30;
             this.buttonModificar.Text = "Modificar";
             this.buttonModificar.UseVisualStyleBackColor = true;
+            this.buttonModificar.Click += new System.EventHandler(this.buttonModificar_Click);
             // 
             // buttonAdicionar
             // 
             this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionar.Location = new System.Drawing.Point(368, 290);
+            this.buttonAdicionar.Location = new System.Drawing.Point(520, 300);
             this.buttonAdicionar.Name = "buttonAdicionar";
-            this.buttonAdicionar.Size = new System.Drawing.Size(85, 30);
+            this.buttonAdicionar.Size = new System.Drawing.Size(136, 30);
             this.buttonAdicionar.TabIndex = 29;
             this.buttonAdicionar.Text = "Adicionar";
             this.buttonAdicionar.UseVisualStyleBackColor = true;
@@ -169,6 +182,7 @@
             this.textBoxHoraInicio.Name = "textBoxHoraInicio";
             this.textBoxHoraInicio.Size = new System.Drawing.Size(121, 20);
             this.textBoxHoraInicio.TabIndex = 36;
+            this.textBoxHoraInicio.Validating += new System.ComponentModel.CancelEventHandler(this.textBoxHoraInicio_Validating);
             // 
             // textBoxHoraFin
             // 
@@ -204,11 +218,19 @@
             this.label5.TabIndex = 32;
             this.label5.Text = "Ubicacion";
             // 
+            // textBoxIdActividad
+            // 
+            this.textBoxIdActividad.Location = new System.Drawing.Point(137, 12);
+            this.textBoxIdActividad.Name = "textBoxIdActividad";
+            this.textBoxIdActividad.Size = new System.Drawing.Size(52, 20);
+            this.textBoxIdActividad.TabIndex = 38;
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 440);
+            this.Controls.Add(this.textBoxIdActividad);
             this.Controls.Add(this.textBoxUbicacion);
             this.Controls.Add(this.textBoxHoraInicio);
             this.Controls.Add(this.textBoxHoraFin);
@@ -229,6 +251,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormActividad";
             this.Text = "FormActividad";
+            this.Load += new System.EventHandler(this.FormActividad_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -255,5 +278,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBoxIdActividad;
     }
 }

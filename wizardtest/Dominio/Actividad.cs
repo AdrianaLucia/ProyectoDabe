@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data.SQLite;
+using System.Data;
 namespace wizardtest.Dominio
 {
     class Actividad
@@ -12,10 +13,10 @@ namespace wizardtest.Dominio
         public int tipoActividad {get; private set;}
         public int estadoActividad { get; private set; }
         public int Dia { get; private set; }
-        public DateTime horaInicio { get; private set; }
-        public DateTime horaFin { get; private set; }
+        public string horaInicio { get; private set; }
+        public string horaFin { get; private set; }
         public string Ubicacion { get; private set; }
-        public Actividad(int cod, string nom,int tipo,int estado,int dia,DateTime horaini,DateTime horafin,string ubi)
+        public Actividad(int cod, string nom,int tipo,int estado,int dia,string horaini, string horafin,string ubi)
         {
             idActividad = cod;
             Nombre = nom;
@@ -46,37 +47,69 @@ namespace wizardtest.Dominio
 
             string comando = @"INSERT INTO Actividad (nombre,tipoActividad,estadoActividad,dia,horaInicio,horaFin,ubicacion) 
                                                     values(@nom,@tipo,@estado,@dia,@horaini,@horafin,@ubi)";
-            SQLiteParameter[] p = new SQLiteParameter[1];
+
+            SQLiteParameter[] p = new SQLiteParameter[7];
             p[0] = new SQLiteParameter("@nom", actividad.Nombre);
-            p[1] = new SQLiteParameter("@nom", actividad.Nombre);
-            p[2] = new SQLiteParameter("@nom", actividad.Nombre);
-            p[3] = new SQLiteParameter("@nom", actividad.Nombre);
-            p[0] = new SQLiteParameter("@nom", actividad.Nombre);
+            p[1] = new SQLiteParameter("@tipo", actividad.tipoActividad);
+            p[2] = new SQLiteParameter("@estado", actividad.estadoActividad);
+            p[3] = new SQLiteParameter("@dia", actividad.Dia);
+            p[4] = new SQLiteParameter("@horaini", actividad.horaInicio);
+            p[5] = new SQLiteParameter("@horafin", actividad.horaFin);
+            p[6] = new SQLiteParameter("@ubi", actividad.Ubicacion);
      
             filasAdicionadas = ConexionBD.ejecutarCambio(comando, p);
 
 
-            return filasAdicionadas == 0;
+            return filasAdicionadas > 0;
         }
 
-        /*        public static DataSet getListado()
-                {
-                //    SQl
-                }
-                */
-        public static Boolean eliminar(EstadoActividad e)
+       
+        public static Boolean eliminar(Actividad e)
         {
             if (!inicializado) { init(); }
             int filasModificados = 0;
 
-            string comando = @"DELETE FROM EstadoActividad WHERE idestado=@cod";
+            string comando = @"DELETE FROM Actividad WHERE idactividad =@cod";
             SQLiteParameter[] p = new SQLiteParameter[1];
-            p[0] = new SQLiteParameter("@cod", e.idEstadoActividad);
+            p[0] = new SQLiteParameter("@cod", e.idActividad);
             filasModificados = ConexionBD.ejecutarCambio(comando, p);
 
 
             return filasModificados == 0;
         }
+
+
+        internal static bool modificar(Actividad actividad)
+        {
+            if (!inicializado) { init(); }
+            int filasAdicionadas = 0;
+
+            string comando = @"REPLACE INTO Actividad 
+                                                    values(@cod,@nom,@tipo,@estado,@dia,@horaini,@horafin,@ubi)";
+            SQLiteParameter[] p = new SQLiteParameter[8];
+            p[0] = new SQLiteParameter("@cod", actividad.idActividad);
+            p[1] = new SQLiteParameter("@nom", actividad.Nombre);
+            p[2] = new SQLiteParameter("@tipo", actividad.tipoActividad);
+            p[3] = new SQLiteParameter("@estado", actividad.estadoActividad);
+            p[4] = new SQLiteParameter("@dia", actividad.Dia);
+            p[5] = new SQLiteParameter("@horaini", actividad.horaInicio);
+            p[6] = new SQLiteParameter("@horafin", actividad.horaFin);
+            p[7] = new SQLiteParameter("@ubi", actividad.Ubicacion);
+            filasAdicionadas = ConexionBD.ejecutarCambio(comando, p);
+
+
+            return filasAdicionadas > 0;
+        }
+        public static DataTable getListado()
+        {
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM Actividad", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
+
 
         static void crearTablaSiNoExiste()
         {
@@ -84,9 +117,8 @@ namespace wizardtest.Dominio
             {
                 con.Open();
                 SQLiteCommand adicion = new SQLiteCommand(con);
-                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS EstadoActividad(
-                                              idestado INTEGER PRIMARY KEY AUTOINCREMENT,
-                                              nombre TEXT
+                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS Actividad (
+                                                idactividad INTEGER PRIMARY KEY AUTOINCREMENT,nombre TEXT,tipoActividad INTEGER,estadoActividad INTEGER,dia INTEGER,horaInicio TEXT,horaFin TEXT,ubicacion TEXT
                                         );";
                 adicion.ExecuteNonQuery();
             }

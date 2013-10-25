@@ -44,16 +44,7 @@ namespace wizardtest.Dominio
             return filasAdicionadas > 0;
         }
 
-        public static DataTable getListado()
-        {
-            DataTable resultado = new DataTable();
-            SQLiteConnection conn = ConexionBD.getConexion();
-            conn.Open();
-            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM TipoActividad", conn);
-            adaptador.Fill(resultado);
-            return resultado;
-        }
-
+        
         public static bool eliminar(TipoActividad t)
         {
             if (!inicializado) { init(); }
@@ -99,6 +90,16 @@ namespace wizardtest.Dominio
 
             return filasAdicionadas > 0;
         }
+        public static DataTable getListado()
+        {
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM TipoActividad", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
+
     }
 
 

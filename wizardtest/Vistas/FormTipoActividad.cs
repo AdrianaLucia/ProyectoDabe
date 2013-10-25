@@ -39,6 +39,7 @@ namespace wizardtest.Vistas
 
         private void FormTipoActividad_Load(object sender, EventArgs e)
         {
+          
             llenarDataSet();
         }
 
