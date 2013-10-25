@@ -1,0 +1,11 @@
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\bin\Debug\wizardtest.exe
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\bin\Debug\wizardtest.pdb
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.csprojResolveAssemblyReference.cache
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Properties.Resources.resources
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.csproj.GenerateResource.Cache
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.exe
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.pdb
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormTipoActividad.resources
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.FormPrincipal.resources
+C:\Users\luiscarloscb\Documents\Visual Studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormActividad.resources
+C:\Users\luiscarloscb\Documents\Visual Studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstadoActividad.resources
