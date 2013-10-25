@@ -96,13 +96,20 @@ namespace wizardtest.Vistas
 
         private void dataGridViewActividades_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxIdActividad.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[0].Value.ToString();
-
-           
-
-
-           // textBoxTipo.Text = dataGridViewTipos.Rows[e.RowIndex].Cells[1
-             //   ].Value.ToString();
+            if (dataGridViewActividades.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                textBoxIdActividad.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[0].Value.ToString();
+                textBoxNombre.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[1].Value.ToString();
+                comboBoxTipo.SelectedValue = dataGridViewActividades.Rows[e.RowIndex].Cells[2].Value.ToString();
+                comboBoxEstado.SelectedValue = dataGridViewActividades.Rows[e.RowIndex].Cells[3].Value.ToString();
+                comboBoxDia.SelectedIndex = Int32.Parse(dataGridViewActividades.Rows[e.RowIndex].Cells[4].Value.ToString());
+                textBoxHoraInicio.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[5].Value.ToString();
+                textBoxHoraFin.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[6].Value.ToString();
+                textBoxUbicacion.Text = dataGridViewActividades.Rows[e.RowIndex].Cells[7].Value.ToString();
+                // textBoxTipo.Text = dataGridViewTipos.Rows[e.RowIndex].Cells[1
+                //   ].Value.ToString();
+            }
+            
 
         }
     }
