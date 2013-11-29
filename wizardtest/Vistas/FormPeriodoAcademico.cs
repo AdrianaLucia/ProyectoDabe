@@ -9,17 +9,38 @@ using System.Windows.Forms;
 
 namespace wizardtest.Vistas
 {
-    public partial class FormEstadoActividad : Form
+    public partial class FormPeriodoAcademico : Form
     {
-        public FormEstadoActividad()
+        public FormPeriodoAcademico()
         {
             InitializeComponent();
         }
 
+        private void textBoxEstado_KeyUp(object sender, KeyEventArgs e)
+        {
+         
+            
+        }
+
+        private void textBoxEstado_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsDigit(e.KeyChar) || (e.KeyChar == (char)Keys.Back)))
+                e.Handled = true;
+        }
+
+        private void textBoxidEstadoActividad_TextChanged(object sender, EventArgs e)
+        { }
         private void buttonAdicionar_Click(object sender, EventArgs e)
         {
-            Controlador.GestionEstadoActividad.adicionar(textBoxEstado.Text);
-            llenarDataSet();
+            if (txtAnio.Text == "" || txtSigla.Text == "")
+            {
+                MessageBox.Show("Un campo esta vacio");
+            }
+            else
+            {
+                Controlador.ControladorPeriodoAcademico.adicionar(Int32.Parse(txtAnio.Text),txtSigla.Text);
+                llenarDataSet();
+            }
         }
 
 
@@ -30,18 +51,18 @@ namespace wizardtest.Vistas
             if (!textBoxidEstadoActividad.Text.Equals(""))
             {
 
-                Controlador.GestionEstadoActividad.eliminar(Int32.Parse(textBoxidEstadoActividad.Text));
+                Controlador.ControladorPeriodoAcademico.eliminar(Int32.Parse(textBoxidEstadoActividad.Text));
             }
             else
             {
-                MessageBox.Show("No esta seleccionado ningun Estado Actividad");
+                MessageBox.Show("No esta seleccionado ningun Periodo academico");
             }
             llenarDataSet();
         }
 
         private void llenarDataSet()
         {
-            System.Data.DataTable t = Controlador.GestionEstadoActividad.getDataSetTodos();
+            System.Data.DataTable t = Controlador.ControladorPeriodoAcademico.getDataSetTodos();
             dataGridViewEstados.AutoGenerateColumns = true;
             dataGridViewEstados.DataSource = t;
             dataGridViewEstados.Columns[0].Visible = false;
@@ -58,7 +79,7 @@ namespace wizardtest.Vistas
             int id;
             if (Int32.TryParse(textBoxidEstadoActividad.Text, out id))
             {
-                Controlador.GestionEstadoActividad.modificar(id, textBoxEstado.Text);
+                Controlador.ControladorPeriodoAcademico.modificar(id, Int32.Parse(txtAnio.Text),txtSigla.Text);
                 llenarDataSet();
                 textBoxidEstadoActividad.Clear();
             }
@@ -66,14 +87,20 @@ namespace wizardtest.Vistas
 
         private void dataGridViewEstados_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+           
+        }
+
+        private void dataGridViewEstados_RowEnter_1(object sender, DataGridViewCellEventArgs e)
+        {
             textBoxidEstadoActividad.Text = dataGridViewEstados.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBoxEstado.Text = dataGridViewEstados.Rows[e.RowIndex].Cells[1
+            txtAnio.Text = dataGridViewEstados.Rows[e.RowIndex].Cells[1
                 ].Value.ToString();
         }
 
-        private void textBoxEstado_TextChanged(object sender, EventArgs e)
-        {
 
-        }
+        
+
+
+
     }
 }

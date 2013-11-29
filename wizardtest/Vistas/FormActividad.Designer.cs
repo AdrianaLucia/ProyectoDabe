@@ -224,6 +224,7 @@
             this.textBoxIdActividad.Name = "textBoxIdActividad";
             this.textBoxIdActividad.Size = new System.Drawing.Size(52, 20);
             this.textBoxIdActividad.TabIndex = 38;
+            this.textBoxIdActividad.Visible = false;
             // 
             // FormActividad
             // 

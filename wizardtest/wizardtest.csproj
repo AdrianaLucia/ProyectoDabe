@@ -57,14 +57,25 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="Controlador\ControladorActividad.cs" />
+    <Compile Include="Controlador\ControladorActividadPeriodo.cs" />
+    <Compile Include="Controlador\ControladorCarrera.cs" />
     <Compile Include="Controlador\ControladorEstadoActividad.cs" />
+    <Compile Include="Controlador\ControladorEstadoEstudiante.cs" />
+    <Compile Include="Controlador\ControladorEstudiante.cs" />
+    <Compile Include="Controlador\ControladorPeriodoAcademico.cs" />
+    <Compile Include="Controlador\ControladorRolUsuario.cs" />
     <Compile Include="Controlador\ControladorTipoActividad.cs" />
+    <Compile Include="Controlador\ControladorUsuario.cs" />
     <Compile Include="Controlador\GestionEstudiante.cs" />
     <Compile Include="Controlador\GestionFacultad.cs" />
     <Compile Include="Dominio\Actividad.cs" />
+    <Compile Include="Dominio\ActividadPeriodo.cs" />
     <Compile Include="Dominio\Carrera.cs" />
     <Compile Include="Dominio\EstadoActividad.cs" />
+    <Compile Include="Dominio\EstadoEstudiante.cs" />
+    <Compile Include="Dominio\Estudiante.cs" />
     <Compile Include="Dominio\Facultad.cs" />
+    <Compile Include="Dominio\PeriodoAcademico.cs" />
     <Compile Include="Dominio\Persona.cs" />
     <Compile Include="Dominio\RolUsuario.cs" />
     <Compile Include="Dominio\TipoActividad.cs" />
@@ -84,17 +95,59 @@
     <Compile Include="Vistas\FormActividad.designer.cs">
       <DependentUpon>FormActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormActividadPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormActividadPeriodo.Designer.cs">
+      <DependentUpon>FormActividadPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormCarrera.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormCarrera.Designer.cs">
+      <DependentUpon>FormCarrera.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormEstadoActividad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormEstadoActividad.designer.cs">
       <DependentUpon>FormEstadoActividad.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\FormEstadoEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormEstadoEstudiante.Designer.cs">
+      <DependentUpon>FormEstadoEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormEstudiante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormEstudiante.Designer.cs">
+      <DependentUpon>FormEstudiante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormPeriodoAcademico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormPeriodoAcademico.Designer.cs">
+      <DependentUpon>FormPeriodoAcademico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormRolUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRolUsuario.Designer.cs">
+      <DependentUpon>FormRolUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\FormTipoActividad.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vistas\FormTipoActividad.Designer.cs">
       <DependentUpon>FormTipoActividad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormUsuario.Designer.cs">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
@@ -111,11 +164,32 @@
     <EmbeddedResource Include="Vistas\FormActividad.resx">
       <DependentUpon>FormActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormActividadPeriodo.resx">
+      <DependentUpon>FormActividadPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormCarrera.resx">
+      <DependentUpon>FormCarrera.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormEstadoActividad.resx">
       <DependentUpon>FormEstadoActividad.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEstadoEstudiante.resx">
+      <DependentUpon>FormEstadoEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormEstudiante.resx">
+      <DependentUpon>FormEstudiante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormPeriodoAcademico.resx">
+      <DependentUpon>FormPeriodoAcademico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormRolUsuario.resx">
+      <DependentUpon>FormRolUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormTipoActividad.resx">
       <DependentUpon>FormTipoActividad.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormUsuario.resx">
+      <DependentUpon>FormUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -45,5 +45,47 @@ namespace wizardtest
             Form gestActividades = new Vistas.FormActividad();
             gestActividades.ShowDialog(); 
         }
+
+        private void buttonRolUsuario_Click(object sender, EventArgs e)
+        {
+            Form getRolUsuario = new Vistas.FormRolUsuario();
+            getRolUsuario.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form getUsuarios = new Vistas.FormUsuario();
+            getUsuarios.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form estadosEstudiantes = new Vistas.FormEstadoEstudiante();
+            estadosEstudiantes.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Form periodosAcademicos = new Vistas.FormPeriodoAcademico();
+            periodosAcademicos.ShowDialog();
+        }
+
+        private void btnEstudiantes_Click(object sender, EventArgs e)
+        {
+            Form estudiantes = new Vistas.FormEstudiante();
+            estudiantes.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form actper = new Vistas.FormActividadPeriodo();
+            actper.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form carr = new Vistas.FormCarrera();
+            carr.ShowDialog();
+        }
     }
 }

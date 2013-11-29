@@ -9,3 +9,41 @@ C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtes
 C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.FormPrincipal.resources
 C:\Users\luiscarloscb\Documents\Visual Studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormActividad.resources
 C:\Users\luiscarloscb\Documents\Visual Studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstadoActividad.resources
+C:\Users\luiscarloscb\Documents\Visual Studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRolUsuario.resources
+C:\Users\luiscarloscb\documents\visual studio 2010\Projects\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormUsuario.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.exe
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.pdb
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\bin\Debug\wizardtest.exe
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\bin\Debug\wizardtest.pdb
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\bin\Debug\System.Data.SQLite.dll
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.FormPrincipal.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Properties.Resources.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormActividad.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstadoActividad.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRolUsuario.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormTipoActividad.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormUsuario.resources
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\ANEZ\Desktop\wizardtest\wizardtest\obj\x86\Debug\GenerateResource.write.1.tlog
+H:\wizardtest\wizardtest\obj\x86\Debug\wizardtest.exe
+H:\wizardtest\wizardtest\obj\x86\Debug\wizardtest.pdb
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.exe
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.pdb
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.csprojResolveAssemblyReference.cache
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.FormPrincipal.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Properties.Resources.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormActividad.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstadoActividad.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstadoEstudiante.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRolUsuario.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormTipoActividad.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormUsuario.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.csproj.GenerateResource.Cache
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\bin\Debug\wizardtest.exe
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\bin\Debug\wizardtest.pdb
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormPeriodoAcademico.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormEstudiante.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormActividadPeriodo.resources
+C:\Users\luiscarloscb\Desktop\wizardtest\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormCarrera.resources

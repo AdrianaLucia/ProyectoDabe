@@ -115,6 +115,7 @@
             this.textBoxidTipoActividad.Name = "textBoxidTipoActividad";
             this.textBoxidTipoActividad.Size = new System.Drawing.Size(134, 20);
             this.textBoxidTipoActividad.TabIndex = 21;
+            this.textBoxidTipoActividad.Visible = false;
             // 
             // FormTipoActividad
             // 
