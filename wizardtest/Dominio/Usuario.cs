@@ -16,11 +16,11 @@ namespace wizardtest.Dominio
         public string ApMat { get; private set; }
         public string Nick { get; private set; }
         public string Password { get; private set; }
-        public string Password2 { get; private set; }
+      //  public string Password2 { get; private set; }
         public int idRolUsuario { get; private set; }
         public string Pregunta { get; private set; }
         public string Respuesta { get; private set; }
-        public Usuario(int pidPersona, string pNombre, string pApPat, string pApMat, string pNick, string pPassword, string pPassword2, int pidRolUsuario, string pPregunta, string pRespuesta)
+        public Usuario(int pidPersona, string pNombre, string pApPat, string pApMat, string pNick, string pPassword, /*string pPassword2,*/ int pidRolUsuario, string pPregunta, string pRespuesta)
         {
             idPersona = pidPersona;
             Nombre = pNombre;
@@ -28,7 +28,7 @@ namespace wizardtest.Dominio
             ApMat = pApMat;
             Nick = pNick;
             Password = pPassword;
-            Password2 = pPassword2;
+            //Password2 = pPassword2;
             idRolUsuario = pidRolUsuario;
             Pregunta = pPregunta;
             Respuesta = pRespuesta;
@@ -52,20 +52,20 @@ namespace wizardtest.Dominio
             if (!inicializado) { init(); }
             int filasAdicionadas = 0;
 
-            string comando = @"INSERT INTO Usuario (Nombre,ApPat,ApMat,Nick,Password,Password2,idRolUsuario,Pregunta,Respuesta)
-values(@Nombre,@ApPat,@ApMat,@Nick,@Password,@Password2,@idRolUsuario,@Pregunta,@Respuesta)";
+            string comando = @"INSERT INTO Usuario (Nombre,ApPat,ApMat,Nick,Password,idRolUsuario,Pregunta,Respuesta)
+values(@Nombre,@ApPat,@ApMat,@Nick,@Password,@idRolUsuario,@Pregunta,@Respuesta)";
 
-            SQLiteParameter[] p = new SQLiteParameter[10];
+            SQLiteParameter[] p = new SQLiteParameter[9];
             p[0] = new SQLiteParameter("@idPersona", pUsuario.idPersona);
             p[1] = new SQLiteParameter("@Nombre", pUsuario.Nombre);
             p[2] = new SQLiteParameter("@ApPat", pUsuario.ApPat);
             p[3] = new SQLiteParameter("@ApMat", pUsuario.ApMat);
             p[4] = new SQLiteParameter("@Nick", pUsuario.Nick);
             p[5] = new SQLiteParameter("@Password", pUsuario.Password);
-            p[6] = new SQLiteParameter("@Password2", pUsuario.Password2);
-            p[7] = new SQLiteParameter("@idRolUsuario", pUsuario.idRolUsuario);
-            p[8] = new SQLiteParameter("@Pregunta", pUsuario.Pregunta);
-            p[9] = new SQLiteParameter("@Respuesta", pUsuario.Respuesta);
+           // p[6] = new SQLiteParameter("@Password2", pUsuario.Password2);
+            p[6] = new SQLiteParameter("@idRolUsuario", pUsuario.idRolUsuario);
+            p[7] = new SQLiteParameter("@Pregunta", pUsuario.Pregunta);
+            p[8] = new SQLiteParameter("@Respuesta", pUsuario.Respuesta);
             filasAdicionadas = ConexionBD.ejecutarCambio(comando, p);
             return filasAdicionadas > 0;
         }
@@ -91,18 +91,18 @@ values(@Nombre,@ApPat,@ApMat,@Nick,@Password,@Password2,@idRolUsuario,@Pregunta,
             int filasAdicionadas = 0;
 
             string comando = @"REPLACE INTO Usuario
-values(@idPersona,@Nombre,@ApPat,@ApMat,@Nick,@Password,@Password2,@idRolUsuario,@Pregunta,@Respuesta)";
-            SQLiteParameter[] p = new SQLiteParameter[10];
+values(@idPersona,@Nombre,@ApPat,@ApMat,@Nick,@Password,@idRolUsuario,@Pregunta,@Respuesta)";
+            SQLiteParameter[] p = new SQLiteParameter[9];
             p[0] = new SQLiteParameter("@idPersona", pUsuario.idPersona);
             p[1] = new SQLiteParameter("@Nombre", pUsuario.Nombre);
             p[2] = new SQLiteParameter("@ApPat", pUsuario.ApPat);
             p[3] = new SQLiteParameter("@ApMat", pUsuario.ApMat);
             p[4] = new SQLiteParameter("@Nick", pUsuario.Nick);
             p[5] = new SQLiteParameter("@Password", pUsuario.Password);
-            p[6] = new SQLiteParameter("@Password2", pUsuario.Password2);
-            p[7] = new SQLiteParameter("@idRolUsuario", pUsuario.idRolUsuario);
-            p[8] = new SQLiteParameter("@Pregunta", pUsuario.Pregunta);
-            p[9] = new SQLiteParameter("@Respuesta", pUsuario.Respuesta);
+           // p[6] = new SQLiteParameter("@Password2", pUsuario.Password2);
+            p[6] = new SQLiteParameter("@idRolUsuario", pUsuario.idRolUsuario);
+            p[7] = new SQLiteParameter("@Pregunta", pUsuario.Pregunta);
+            p[8] = new SQLiteParameter("@Respuesta", pUsuario.Respuesta);
             filasAdicionadas = ConexionBD.ejecutarCambio(comando, p);
 
 
@@ -127,7 +127,7 @@ values(@idPersona,@Nombre,@ApPat,@ApMat,@Nick,@Password,@Password2,@idRolUsuario
                 con.Open();
                 SQLiteCommand adicion = new SQLiteCommand(con);
                 adicion.CommandText = @"CREATE TABLE IF NOT EXISTS Usuario (
-idPersona INTEGER PRIMARY KEY AUTOINCREMENT,Nombre TEXT,ApPat TEXT,ApMat TEXT,Nick TEXT,Password TEXT,Password2 TEXT,idRolUsuario INTEGER,Pregunta TEXT,Respuesta TEXT );";
+idPersona INTEGER PRIMARY KEY AUTOINCREMENT,Nombre TEXT,ApPat TEXT,ApMat TEXT,Nick TEXT,Password TEXT,idRolUsuario INTEGER,Pregunta TEXT,Respuesta TEXT );";
                 adicion.ExecuteNonQuery();
             }
         }

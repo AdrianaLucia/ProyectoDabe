@@ -64,6 +64,9 @@ values(@NroRegistro,@Nombres,@ApellidoPaterno,@ApellidoMaterno,@Facultad,@Carrer
             p[6] = new SQLiteParameter("@Carrera", pEstudiante.Carrera);
             p[7] = new SQLiteParameter("@EstadoEstudiante", pEstudiante.EstadoEstudiante);
             p[8] = new SQLiteParameter("@UsoCondicionEspecial", pEstudiante.UsoCondicionEspecial);
+
+           
+
             filasAdicionadas = ConexionBD.ejecutarCambio(comando, p);
             return filasAdicionadas > 0;
         }

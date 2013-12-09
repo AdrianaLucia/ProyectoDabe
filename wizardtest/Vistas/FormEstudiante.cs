@@ -156,6 +156,7 @@ namespace wizardtest.Vistas
             comboBoxCarrera.DisplayMember = "nombre";
             comboBoxCarrera.ValueMember = "codigo";*/
             LlenarDataSet();
+            limpiarCampos();
             /* DataTable listaEstados = Controlador.ControladorRolUsuario.getDataSetTodos();
              comboBoxFacultad.DataSource = listaEstados;
              comboBoxFacultad.DisplayMember = "nombre";
@@ -181,5 +182,21 @@ namespace wizardtest.Vistas
             comboBoxCarrera.ValueMember = "codigo";
            // LlenarDataSet();
         }
+
+        private void limpiarCampos()
+        {
+            textBoxApMat.Text = "";
+            textBoxApPat.Text = "";
+            textBoxIdEstudiante.Text = "";
+            textBoxNombre.Text = "";
+            textBoxRegistroEstudiante.Text = "";
+            cbCondicionEspecial.Checked = false;
+        }
+
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+        }
     }
 }
+

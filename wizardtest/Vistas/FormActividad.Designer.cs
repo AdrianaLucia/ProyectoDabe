@@ -47,6 +47,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxIdActividad = new System.Windows.Forms.TextBox();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -80,7 +81,7 @@
             // comboBoxTipo
             // 
             this.comboBoxTipo.FormattingEnabled = true;
-            this.comboBoxTipo.Location = new System.Drawing.Point(14, 103);
+            this.comboBoxTipo.Location = new System.Drawing.Point(14, 133);
             this.comboBoxTipo.Name = "comboBoxTipo";
             this.comboBoxTipo.Size = new System.Drawing.Size(121, 21);
             this.comboBoxTipo.TabIndex = 26;
@@ -88,14 +89,14 @@
             // comboBoxEstado
             // 
             this.comboBoxEstado.FormattingEnabled = true;
-            this.comboBoxEstado.Location = new System.Drawing.Point(14, 179);
+            this.comboBoxEstado.Location = new System.Drawing.Point(14, 186);
             this.comboBoxEstado.Name = "comboBoxEstado";
             this.comboBoxEstado.Size = new System.Drawing.Size(121, 21);
             this.comboBoxEstado.TabIndex = 25;
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(14, 44);
+            this.textBoxNombre.Location = new System.Drawing.Point(14, 87);
             this.textBoxNombre.Name = "textBoxNombre";
             this.textBoxNombre.Size = new System.Drawing.Size(121, 20);
             this.textBoxNombre.TabIndex = 24;
@@ -103,7 +104,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(11, 212);
+            this.label4.Location = new System.Drawing.Point(11, 217);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(23, 13);
             this.label4.TabIndex = 22;
@@ -112,7 +113,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 151);
+            this.label3.Location = new System.Drawing.Point(11, 163);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(87, 13);
             this.label3.TabIndex = 21;
@@ -121,7 +122,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 77);
+            this.label2.Location = new System.Drawing.Point(11, 114);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 13);
             this.label2.TabIndex = 20;
@@ -130,7 +131,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 19);
+            this.label1.Location = new System.Drawing.Point(13, 66);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(91, 13);
             this.label1.TabIndex = 19;
@@ -171,14 +172,14 @@
             // 
             // textBoxUbicacion
             // 
-            this.textBoxUbicacion.Location = new System.Drawing.Point(14, 399);
+            this.textBoxUbicacion.Location = new System.Drawing.Point(16, 376);
             this.textBoxUbicacion.Name = "textBoxUbicacion";
             this.textBoxUbicacion.Size = new System.Drawing.Size(256, 20);
             this.textBoxUbicacion.TabIndex = 37;
             // 
             // textBoxHoraInicio
             // 
-            this.textBoxHoraInicio.Location = new System.Drawing.Point(14, 297);
+            this.textBoxHoraInicio.Location = new System.Drawing.Point(14, 287);
             this.textBoxHoraInicio.Name = "textBoxHoraInicio";
             this.textBoxHoraInicio.Size = new System.Drawing.Size(121, 20);
             this.textBoxHoraInicio.TabIndex = 36;
@@ -186,7 +187,7 @@
             // 
             // textBoxHoraFin
             // 
-            this.textBoxHoraFin.Location = new System.Drawing.Point(14, 346);
+            this.textBoxHoraFin.Location = new System.Drawing.Point(14, 331);
             this.textBoxHoraFin.Name = "textBoxHoraFin";
             this.textBoxHoraFin.Size = new System.Drawing.Size(121, 20);
             this.textBoxHoraFin.TabIndex = 35;
@@ -194,7 +195,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(11, 330);
+            this.label7.Location = new System.Drawing.Point(11, 315);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(44, 13);
             this.label7.TabIndex = 34;
@@ -203,7 +204,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(11, 281);
+            this.label6.Location = new System.Drawing.Point(11, 271);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 13);
             this.label6.TabIndex = 33;
@@ -212,7 +213,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(11, 383);
+            this.label5.Location = new System.Drawing.Point(13, 360);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 32;
@@ -226,11 +227,23 @@
             this.textBoxIdActividad.TabIndex = 38;
             this.textBoxIdActividad.Visible = false;
             // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(14, 402);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(121, 30);
+            this.btnLimpiarCampos.TabIndex = 39;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(673, 440);
+            this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.textBoxIdActividad);
             this.Controls.Add(this.textBoxUbicacion);
             this.Controls.Add(this.textBoxHoraInicio);
@@ -280,5 +293,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxIdActividad;
+        private System.Windows.Forms.Button btnLimpiarCampos;
     }
 }

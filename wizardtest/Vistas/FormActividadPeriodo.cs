@@ -34,7 +34,8 @@ namespace wizardtest.Vistas
 
         private void FormActividadPeriodo_Load(object sender, EventArgs e)
         {
-           
+            int idPeriodoActual = Properties.Settings.Default.id;
+            
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
             System.Data.DataTable t = Controlador.ControladorActividad.getDataSetTodos();
             dataGridActividades.AutoGenerateColumns = true;
@@ -46,8 +47,10 @@ namespace wizardtest.Vistas
             comboBox1.DataSource = listaEstados;
             comboBox1.DisplayMember = "texto";
             comboBox1.ValueMember = "idPeriodo";
-
             comboBox1.SelectedIndex = 0;
+            if (idPeriodoActual != -1)
+                comboBox1.SelectedValue = idPeriodoActual;
+            
             actualizargrid();
 
         }

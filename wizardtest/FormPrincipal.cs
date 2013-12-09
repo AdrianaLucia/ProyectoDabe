@@ -87,5 +87,46 @@ namespace wizardtest
             Form carr = new Vistas.FormCarrera();
             carr.ShowDialog();
         }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           
+        }
+        private bool yaCargo = false;
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            yaCargo = false;
+            DataTable listaEstados = Controlador.ControladorPeriodoAcademico.getDataSetTodosTexto();
+            comboBox1.DataSource = listaEstados;
+            comboBox1.DisplayMember = "texto";
+            comboBox1.ValueMember = "idPeriodo";
+            yaCargo = true;
+            if (Properties.Settings.Default.id != -1)
+            {
+                comboBox1.SelectedValue = Properties.Settings.Default.id;
+            }
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            if (yaCargo)
+            {
+                string indiceSeleccionado = comboBox1.SelectedValue.ToString();
+                Properties.Settings.Default.id = Convert.ToInt32(indiceSeleccionado);
+                Properties.Settings.Default.Save();
+            }
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Form asistencia = new Vistas.FormRegistroAsistencia();
+            asistencia.ShowDialog();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Form registroEstudianteActividad = new Vistas.FormRegistroEstudianteActividadPeriodo();
+            registroEstudianteActividad.ShowDialog();
+        }
     }
 }

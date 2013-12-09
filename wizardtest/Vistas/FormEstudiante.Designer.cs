@@ -51,6 +51,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.comboEstadoEstudiante = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.btnLimpiarCampos = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridListaUsuarios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -273,11 +274,22 @@
             this.label6.TabIndex = 51;
             this.label6.Text = "Facultad";
             // 
+            // btnLimpiarCampos
+            // 
+            this.btnLimpiarCampos.Location = new System.Drawing.Point(492, 418);
+            this.btnLimpiarCampos.Name = "btnLimpiarCampos";
+            this.btnLimpiarCampos.Size = new System.Drawing.Size(107, 23);
+            this.btnLimpiarCampos.TabIndex = 53;
+            this.btnLimpiarCampos.Text = "Limpiar Campos";
+            this.btnLimpiarCampos.UseVisualStyleBackColor = true;
+            this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
+            // 
             // FormEstudiante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 458);
+            this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.comboEstadoEstudiante);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -335,5 +347,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboEstadoEstudiante;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnLimpiarCampos;
     }
 }

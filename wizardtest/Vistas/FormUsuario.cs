@@ -6,7 +6,6 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using System.Data;
 using System.Data.SQLite;
 
 namespace wizardtest.Vistas
@@ -74,7 +73,7 @@ namespace wizardtest.Vistas
 
                 int idRol = Int32.Parse(comboBoxRoles.SelectedValue.ToString());
                 string pregSec = comboBoxPregunta.SelectedItem.ToString() ;
-                Controlador.ControladorUsuario.adicionar(textBoxNombre.Text, textBoxApPat.Text, textBoxApMat.Text, textBoxNick.Text, textBoxPassword.Text, textBoxPassword2.Text, idRol, pregSec, textBoxRespuesta.Text);
+                Controlador.ControladorUsuario.adicionar(textBoxNombre.Text, textBoxApPat.Text, textBoxApMat.Text, textBoxNick.Text, textBoxPassword.Text, idRol, pregSec, textBoxRespuesta.Text);
             }
             LlenarDataSet();
         }
@@ -89,7 +88,7 @@ namespace wizardtest.Vistas
 
                     int idRol = Int32.Parse(comboBoxRoles.SelectedValue.ToString());
                     string pregSec = comboBoxPregunta.SelectedItem.ToString();
-                    Controlador.ControladorUsuario.modificar(idUsuario, textBoxNombre.Text, textBoxApPat.Text, textBoxApMat.Text, textBoxNick.Text, textBoxPassword.Text, textBoxPassword2.Text, idRol, pregSec, textBoxRespuesta.Text);
+                    Controlador.ControladorUsuario.modificar(idUsuario, textBoxNombre.Text, textBoxApPat.Text, textBoxApMat.Text, textBoxNick.Text, textBoxPassword.Text, idRol, pregSec, textBoxRespuesta.Text);
                 }
             }catch(Exception ex){
             }
@@ -122,10 +121,10 @@ namespace wizardtest.Vistas
                 textBoxApMat.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[3].Value.ToString();
                 textBoxNick.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[4].Value.ToString();
                 textBoxPassword.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[5].Value.ToString();
-                textBoxPassword2.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
-                comboBoxRoles.SelectedValue = dataGridListaUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
-                comboBoxPregunta.SelectedItem = dataGridListaUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString();
-                textBoxRespuesta.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[9].Value.ToString();
+               // textBoxPassword2.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
+                comboBoxRoles.SelectedValue = dataGridListaUsuarios.Rows[e.RowIndex].Cells[6].Value.ToString();
+                comboBoxPregunta.SelectedItem = dataGridListaUsuarios.Rows[e.RowIndex].Cells[7].Value.ToString();
+                textBoxRespuesta.Text = dataGridListaUsuarios.Rows[e.RowIndex].Cells[8].Value.ToString();
                 
             }
         }

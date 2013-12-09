@@ -12,17 +12,17 @@ namespace wizardtest.Controlador
 {
     class ControladorUsuario
     {
-        public static bool adicionar(string pNombre, string pApPat, string pApMat, string pNick, string pPassword, string pPassword2, int pidRolUsuario, string pPregunta, string pRespuesta)
+        public static bool adicionar(string pNombre, string pApPat, string pApMat, string pNick, string pPassword, int pidRolUsuario, string pPregunta, string pRespuesta)
             {
 
-                Usuario aCrear = new Usuario(0, pNombre, pApPat, pApMat, pNick, pPassword, pPassword2, pidRolUsuario, pPregunta, pRespuesta);
+                Usuario aCrear = new Usuario(0, pNombre, pApPat, pApMat, pNick, pPassword, pidRolUsuario, pPregunta, pRespuesta);
                 SerializadorUsuario.adicionar(aCrear);
                 return false;
             }
             public static bool eliminar(int id)
             {
 
-                Usuario aEliminar = new Usuario(id, "", "","","","","",0,"","");
+                Usuario aEliminar = new Usuario(id, "", "","","","",0,"","");
                 SerializadorUsuario.eliminar(aEliminar);
                 return false;
             }
@@ -33,9 +33,9 @@ namespace wizardtest.Controlador
             }
 
 
-            internal static bool modificar(int id, string pNombre, string pApPat, string pApMat, string pNick, string pPassword, string pPassword2, int pidRolUsuario, string pPregunta, string pRespuesta)
+            internal static bool modificar(int id, string pNombre, string pApPat, string pApMat, string pNick, string pPassword, int pidRolUsuario, string pPregunta, string pRespuesta)
             {
-                Usuario aModificar = new Usuario(id, pNombre, pApPat, pApMat, pNick, pPassword, pPassword2, pidRolUsuario, pPregunta, pRespuesta);
+                Usuario aModificar = new Usuario(id, pNombre, pApPat, pApMat, pNick, pPassword, pidRolUsuario, pPregunta, pRespuesta);
                 return SerializadorUsuario.modificar(aModificar);
             }
     }

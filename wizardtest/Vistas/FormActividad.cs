@@ -54,6 +54,7 @@ namespace wizardtest.Vistas
                 }
         private void FormActividad_Load(object sender, EventArgs e)
         {
+            
               DataTable listaEstados = Controlador.GestionEstadoActividad.getDataSetTodos();
               comboBoxEstado.DataSource = listaEstados;
               comboBoxEstado.DisplayMember = "nombre";
@@ -64,6 +65,7 @@ namespace wizardtest.Vistas
               comboBoxTipo.ValueMember = "idtipo";
 
             llenarDataSet();
+            limpiarCampos();
         }
 
         private void buttonModificar_Click(object sender, EventArgs e)
@@ -111,6 +113,18 @@ namespace wizardtest.Vistas
             }
             
 
+        }
+        private void limpiarCampos()
+        {
+            textBoxHoraFin.Text = "";
+            textBoxHoraInicio.Text = "";
+            textBoxIdActividad.Text = "";
+            textBoxNombre.Text = "";
+            textBoxUbicacion.Text = "";
+        }
+        private void btnLimpiarCampos_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
         }
     }
 }
