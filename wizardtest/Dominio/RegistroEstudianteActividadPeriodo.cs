@@ -99,7 +99,16 @@ values(@id,@idEstudiante,@idActividad,@idPeriodo)";
             adaptador.Fill(resultado);
             return resultado;
         }
-
+        public static DataTable getListadoEstudiantesNoRegistrados(int idPeriodo)
+        {
+            crearTablaSiNoExiste();
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM Estudiante where idEstudiante NOT IN (SELECT idEstudiante from RegistroEstudianteActividadPeriodo where idPeriodo=" + idPeriodo + ")s;", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
 
         static void crearTablaSiNoExiste()
         {

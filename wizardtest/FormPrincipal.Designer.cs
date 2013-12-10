@@ -42,11 +42,19 @@
             this.label1 = new System.Windows.Forms.Label();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGestionTipoActividad
             // 
-            this.btnGestionTipoActividad.Location = new System.Drawing.Point(36, 127);
+            this.btnGestionTipoActividad.Location = new System.Drawing.Point(29, 76);
             this.btnGestionTipoActividad.Name = "btnGestionTipoActividad";
             this.btnGestionTipoActividad.Size = new System.Drawing.Size(190, 46);
             this.btnGestionTipoActividad.TabIndex = 3;
@@ -56,7 +64,7 @@
             // 
             // buttonGestionEstadoActividad
             // 
-            this.buttonGestionEstadoActividad.Location = new System.Drawing.Point(36, 75);
+            this.buttonGestionEstadoActividad.Location = new System.Drawing.Point(29, 19);
             this.buttonGestionEstadoActividad.Name = "buttonGestionEstadoActividad";
             this.buttonGestionEstadoActividad.Size = new System.Drawing.Size(190, 46);
             this.buttonGestionEstadoActividad.TabIndex = 5;
@@ -66,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(36, 179);
+            this.button1.Location = new System.Drawing.Point(29, 136);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(190, 46);
             this.button1.TabIndex = 6;
@@ -76,7 +84,7 @@
             // 
             // buttonRolUsuario
             // 
-            this.buttonRolUsuario.Location = new System.Drawing.Point(253, 75);
+            this.buttonRolUsuario.Location = new System.Drawing.Point(19, 76);
             this.buttonRolUsuario.Name = "buttonRolUsuario";
             this.buttonRolUsuario.Size = new System.Drawing.Size(190, 46);
             this.buttonRolUsuario.TabIndex = 7;
@@ -86,7 +94,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(253, 127);
+            this.button2.Location = new System.Drawing.Point(19, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(190, 46);
             this.button2.TabIndex = 8;
@@ -96,7 +104,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(253, 241);
+            this.button3.Location = new System.Drawing.Point(19, 71);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(190, 46);
             this.button3.TabIndex = 9;
@@ -106,7 +114,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(36, 283);
+            this.button4.Location = new System.Drawing.Point(29, 23);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(190, 46);
             this.button4.TabIndex = 10;
@@ -116,7 +124,7 @@
             // 
             // btnEstudiantes
             // 
-            this.btnEstudiantes.Location = new System.Drawing.Point(253, 189);
+            this.btnEstudiantes.Location = new System.Drawing.Point(19, 123);
             this.btnEstudiantes.Name = "btnEstudiantes";
             this.btnEstudiantes.Size = new System.Drawing.Size(190, 46);
             this.btnEstudiantes.TabIndex = 11;
@@ -126,7 +134,7 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(36, 231);
+            this.button5.Location = new System.Drawing.Point(296, 220);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(190, 46);
             this.button5.TabIndex = 12;
@@ -136,7 +144,7 @@
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(253, 306);
+            this.button6.Location = new System.Drawing.Point(19, 19);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(190, 46);
             this.button6.TabIndex = 13;
@@ -166,7 +174,7 @@
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(36, 387);
+            this.button7.Location = new System.Drawing.Point(296, 324);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(190, 46);
             this.button7.TabIndex = 57;
@@ -176,7 +184,7 @@
             // 
             // button8
             // 
-            this.button8.Location = new System.Drawing.Point(36, 335);
+            this.button8.Location = new System.Drawing.Point(296, 272);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(190, 46);
             this.button8.TabIndex = 58;
@@ -184,28 +192,74 @@
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.buttonGestionEstadoActividad);
+            this.groupBox1.Controls.Add(this.btnGestionTipoActividad);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Location = new System.Drawing.Point(21, 75);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(250, 202);
+            this.groupBox1.TabIndex = 59;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Actividades";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.button4);
+            this.groupBox2.Location = new System.Drawing.Point(21, 283);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(250, 87);
+            this.groupBox2.TabIndex = 60;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Periodos Academicos";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.buttonRolUsuario);
+            this.groupBox3.Controls.Add(this.button2);
+            this.groupBox3.Location = new System.Drawing.Point(277, 75);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(229, 139);
+            this.groupBox3.TabIndex = 61;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Usuarios";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.btnEstudiantes);
+            this.groupBox4.Controls.Add(this.button3);
+            this.groupBox4.Controls.Add(this.button6);
+            this.groupBox4.Location = new System.Drawing.Point(512, 75);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(229, 180);
+            this.groupBox4.TabIndex = 62;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Estudiantes";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 439);
+            this.ClientSize = new System.Drawing.Size(770, 399);
+            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.btnEstudiantes);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.buttonRolUsuario);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.buttonGestionEstadoActividad);
-            this.Controls.Add(this.btnGestionTipoActividad);
             this.Name = "FormPrincipal";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.FormPrincipal_Load);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +281,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

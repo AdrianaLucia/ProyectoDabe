@@ -128,5 +128,10 @@ namespace wizardtest
             Form registroEstudianteActividad = new Vistas.FormRegistroEstudianteActividadPeriodo();
             registroEstudianteActividad.ShowDialog();
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

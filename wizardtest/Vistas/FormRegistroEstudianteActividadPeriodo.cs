@@ -34,7 +34,7 @@ namespace wizardtest.Vistas
             cbActividadesPeriodo.DisplayMember = "nombre";
             cbActividadesPeriodo.SelectedIndex = 0;
 
-            DataTable listaEstudiantes = Controlador.ControladorEstudiante.getDataSetTodos();
+            DataTable listaEstudiantes = Controlador.ControladorRegistroEstudianteActividadPeriodo.getDataSetEstudiantesNoRegistrados(idPeriodoActual);
             dgEstudiantes.AutoGenerateColumns = true;
             dgEstudiantes.DataSource = listaEstudiantes;
             dgEstudiantes.Columns[0].Visible = false;

@@ -31,7 +31,10 @@ namespace wizardtest.Controlador
             return SerializadorRegistroEstudianteActividadPeriodo.getListadoEstudiantes(idActividad, idPeriodo);
         }
 
-
+        public static System.Data.DataTable getDataSetEstudiantesNoRegistrados(int idPeriodo)
+        {
+            return SerializadorRegistroEstudianteActividadPeriodo.getListadoEstudiantesNoRegistrados(idPeriodo);
+        }
         public static bool modificar(int cod, int idEst, int idAct, int idPer)
         {
             RegistroEstudianteActividadPeriodo aModificar = new RegistroEstudianteActividadPeriodo(cod, idEst, idAct, idPer);
