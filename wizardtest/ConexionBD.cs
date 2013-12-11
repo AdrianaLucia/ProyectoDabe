@@ -10,7 +10,7 @@ namespace wizardtest
     class ConexionBD
     {
         //atic private SQLiteConnection conn = null;
-        static private string connStr = "Data Source=mibd.db;Version=3;";
+        static private string connStr = "Data Source="+Properties.Settings.Default.dbpath+";Version=3;";
         public static SQLiteConnection getConexion(){
 
             return new SQLiteConnection(connStr);

@@ -79,5 +79,27 @@ namespace wizardtest.Vistas
             ex.dt = dgEstudiantes;
             ex.exportToExcel();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            cbEstadoEstudiante.DropDownStyle = ComboBoxStyle.DropDownList;
+
+            int idPeriodoActual = Properties.Settings.Default.id;
+            if (idPeriodoActual == -1)
+                MessageBox.Show("Periodo no seleccionado");
+
+
+            System.Data.DataTable t = Controlador.ControladorRegistroPromedio.getDataSetTodosAsistencia(idPeriodoActual);
+            dgEstudiantes.AutoGenerateColumns = true;
+            dgEstudiantes.DataSource = t;
+            dgEstudiantes.Columns[0].Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            int idPeriodoActual = Properties.Settings.Default.id;
+            if (idPeriodoActual == -1)
+                MessageBox.Show("Periodo no seleccionado");
+        }
     }
 }

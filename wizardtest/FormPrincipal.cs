@@ -157,5 +157,13 @@ namespace wizardtest
             Form report = new Vistas.Reportes();
             report.ShowDialog();
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                txtPath.Text = openFileDialog1.FileName;
+            }
+        }
     }
 }

@@ -48,6 +48,9 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.button9 = new System.Windows.Forms.Button();
             this.btnReportes = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.txtPath = new System.Windows.Forms.TextBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -260,11 +263,35 @@
             this.btnReportes.UseVisualStyleBackColor = true;
             this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
+            // button10
+            // 
+            this.button10.Location = new System.Drawing.Point(452, 22);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(135, 23);
+            this.button10.TabIndex = 65;
+            this.button10.Text = "Archivo de datos:";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
+            // txtPath
+            // 
+            this.txtPath.Enabled = false;
+            this.txtPath.Location = new System.Drawing.Point(593, 24);
+            this.txtPath.Name = "txtPath";
+            this.txtPath.Size = new System.Drawing.Size(148, 20);
+            this.txtPath.TabIndex = 14;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(770, 399);
+            this.Controls.Add(this.txtPath);
+            this.Controls.Add(this.button10);
             this.Controls.Add(this.btnReportes);
             this.Controls.Add(this.button9);
             this.Controls.Add(this.groupBox4);
@@ -311,6 +338,9 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button btnReportes;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.TextBox txtPath;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

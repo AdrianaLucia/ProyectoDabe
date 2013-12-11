@@ -60,6 +60,7 @@
             this.label1.Size = new System.Drawing.Size(98, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Estado Estudiantes";
+            this.label1.Visible = false;
             // 
             // cbEstadoEstudiante
             // 
@@ -69,6 +70,7 @@
             this.cbEstadoEstudiante.Name = "cbEstadoEstudiante";
             this.cbEstadoEstudiante.Size = new System.Drawing.Size(138, 21);
             this.cbEstadoEstudiante.TabIndex = 2;
+            this.cbEstadoEstudiante.Visible = false;
             // 
             // button1
             // 
@@ -98,6 +100,7 @@
             this.button3.TabIndex = 5;
             this.button3.Text = "Estudiantes con Riesgo";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -107,6 +110,8 @@
             this.button4.TabIndex = 6;
             this.button4.Text = "Detalle de estudiante seleccionado";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // btnPrint
             // 

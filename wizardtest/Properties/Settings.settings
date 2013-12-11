@@ -8,5 +8,8 @@
     <Setting Name="usuarioActual" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
+    <Setting Name="dbpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">mibd.db</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

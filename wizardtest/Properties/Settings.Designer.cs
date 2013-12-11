@@ -46,5 +46,17 @@ namespace wizardtest.Properties {
                 this["usuarioActual"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("mibd.db")]
+        public string dbpath {
+            get {
+                return ((string)(this["dbpath"]));
+            }
+            set {
+                this["dbpath"] = value;
+            }
+        }
     }
 }

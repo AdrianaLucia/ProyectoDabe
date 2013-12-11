@@ -46,7 +46,7 @@ namespace wizardtest.Vistas
             DataTable listaEstados = Controlador.ControladorPeriodoAcademico.getDataSetTodosTexto();
             comboBox1.DataSource = listaEstados;
             comboBox1.DisplayMember = "texto";
-            comboBox1.ValueMember = "idPeriodo";
+            comboBox1.ValueMember = "idActividad";
             comboBox1.SelectedIndex = 0;
             if (idPeriodoActual != -1)
                 comboBox1.SelectedValue = idPeriodoActual;

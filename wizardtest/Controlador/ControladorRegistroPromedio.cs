@@ -43,5 +43,10 @@ namespace wizardtest.Controlador
             RegistroPromedios aModificar = new RegistroPromedios(pNroRegistro, pPeriodo, pNombre, pCarrera, pPromCarrera, pIAA, pIAP);
             return SerializadorRegistroPromedios.modificar(aModificar);
         }
+
+        internal static System.Data.DataTable getDataSetTodosAsistencia(int idPeriodoActual)
+        {
+            return SerializadorRegistroPromedios.getListadoPorPeriodoActividadAsistencia(idPeriodoActual);
+        }
     }
 }

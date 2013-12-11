@@ -48,7 +48,7 @@ namespace wizardtest.Vistas
 
             DataTable listaAct = Controlador.ControladorActividadPeriodo.getDataSetTodosActividadNombre(idPeriodoActual);
             cbActividadesPeriodo.DataSource = listaAct;
-            cbActividadesPeriodo.ValueMember = "idAsociacion";
+            cbActividadesPeriodo.ValueMember = "idActividad";
             cbActividadesPeriodo.DisplayMember = "nombre";
             cbActividadesPeriodo.SelectedIndex = 0;
 

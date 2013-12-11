@@ -137,5 +137,17 @@ values(@NroRegistro,@Periodo,@Nombre,@Carrera,@PromCarrera,@IAA,@IAP)";
         }
 
 
+
+        internal static DataTable getListadoPorPeriodoActividadAsistencia(int idPeriodoActual)
+        {
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("select ES.NroRegistro NRO_REGISTRO, (ES.Nombres||' '||ES.ApellidoPaterno||' '||ES.ApellidoMaterno) NOMBRE, AC.nombre ACTIV, (SELECT COUNT(*) FROM Asistencia WHERE REAP.id=Asistencia.idREAP) ASISTENCIAS "+
+                                                         "FROM Estudiante as ES, RegistroEstudianteActividadPeriodo AS REAP, Actividad as AC "
+                                                         +"WHERE REAP.idPeriodo='"+idPeriodoActual+"' AND REAP.idEstudiante=ES.idEstudiante AND AC.idactividad=REAP.idActividad;", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
     }
 }
