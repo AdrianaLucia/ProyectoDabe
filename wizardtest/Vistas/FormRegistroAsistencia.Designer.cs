@@ -127,9 +127,11 @@
             // 
             // btnAsistencia
             // 
-            this.btnAsistencia.Location = new System.Drawing.Point(287, 396);
+            this.btnAsistencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAsistencia.Location = new System.Drawing.Point(287, 402);
             this.btnAsistencia.Name = "btnAsistencia";
-            this.btnAsistencia.Size = new System.Drawing.Size(312, 23);
+            this.btnAsistencia.Size = new System.Drawing.Size(312, 34);
             this.btnAsistencia.TabIndex = 8;
             this.btnAsistencia.Text = "Cambiar Asistencia Seleccionado";
             this.btnAsistencia.UseVisualStyleBackColor = true;

@@ -97,13 +97,21 @@ namespace wizardtest.Vistas
         private void btnAsistencia_Click(object sender, EventArgs e)
         {
             int idReapSeleccionado = -1;
-            if (dgEstudiantesEnActividad.SelectedRows.Count > 0)
+            if (dgEstudiantesEnActividad.SelectedRows.Count > 0 && dgEstudiantesEnActividad.SelectedRows[0].Cells["id"].Value!= null)
             {
                 string valorEnCelda = dgEstudiantesEnActividad.SelectedRows[0].Cells["id"].Value.ToString();
                 int AsistenciaActual = Convert.ToInt32(dgEstudiantesEnActividad.SelectedRows[0].Cells["Asistio"].Value.ToString());
                 if (Int32.TryParse(valorEnCelda, out idReapSeleccionado))
                 {
-                    Controlador.ControladorAsistencia.crearReemplazar(idReapSeleccionado, 1 - AsistenciaActual, semanaSeleccionada);
+                    if (AsistenciaActual == 0)
+                    {
+                        Controlador.ControladorAsistencia.crearReemplazar(idReapSeleccionado, 1 - AsistenciaActual, semanaSeleccionada);
+                    }
+                    else
+                    {
+                        Controlador.ControladorAsistencia.eliminar(idReapSeleccionado, semanaSeleccionada);
+                    }
+
                 }
             }
             RefrescarListas();
