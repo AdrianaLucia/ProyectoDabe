@@ -121,9 +121,25 @@ values(@id,@idEstudiante,@idActividad,@idPeriodo)";
                 adicion.CommandText = @"CREATE TABLE IF NOT EXISTS RegistroEstudianteActividadPeriodo (
 id INTEGER PRIMARY KEY AUTOINCREMENT,idEstudiante INTEGER,idActividad INTEGER,idPeriodo INTEGER );";
                 adicion.ExecuteNonQuery();
+                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS Asistencia (idREAP INTEGER,Asistio INTEGER,Fecha TEXT,PRIMARY KEY(idREAP,Fecha) );";
+                adicion.ExecuteNonQuery();
             }
         }
 
 
+
+        internal static DataTable getListadoEstudiantesSemana(int idActividad, int idPeriodo, string semana)
+        {
+            crearTablaSiNoExiste();
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter(@"SELECT REAP.id as id, ES.NroRegistro as NumeroRegistro ,(ES.Nombres||' '||ES.ApellidoPaterno||' '||ES.ApellidoMaterno) "+
+                                                                    " as Nombre, IFNULL((SELECT Asistio FROM Asistencia ASIS where ASIS.idREAP=REAP.id AND ASIS.Fecha='+"+semana+@"+'),'0') as Asistio "+
+                                                                    "FROM RegistroEstudianteActividadPeriodo REAP,Estudiante ES "+
+                                                                    "WHERE ES.idEstudiante=REAP.idEstudiante AND idPeriodo=" + idPeriodo + " AND idActividad=" + idActividad + ";", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
     }
 }

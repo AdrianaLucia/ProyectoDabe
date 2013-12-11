@@ -58,6 +58,7 @@
     <Compile Include="ConexionBD.cs" />
     <Compile Include="Controlador\ControladorActividad.cs" />
     <Compile Include="Controlador\ControladorActividadPeriodo.cs" />
+    <Compile Include="Controlador\ControladorAsistencia.cs" />
     <Compile Include="Controlador\ControladorCarrera.cs" />
     <Compile Include="Controlador\ControladorEstadoActividad.cs" />
     <Compile Include="Controlador\ControladorEstadoEstudiante.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="Controlador\GestionFacultad.cs" />
     <Compile Include="Dominio\Actividad.cs" />
     <Compile Include="Dominio\ActividadPeriodo.cs" />
+    <Compile Include="Dominio\Asistencia.cs" />
     <Compile Include="Dominio\Carrera.cs" />
     <Compile Include="Dominio\EstadoActividad.cs" />
     <Compile Include="Dominio\EstadoEstudiante.cs" />

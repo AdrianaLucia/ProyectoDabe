@@ -48,7 +48,7 @@ namespace wizardtest.Vistas
         private void actualizarListaEstudiantesActividad(int i)
         {
 
-            System.Data.DataTable t = Controlador.ControladorRegistroEstudianteActividadPeriodo.getDataSetEstudiantes(i, periodoActual);
+            System.Data.DataTable t = Controlador.ControladorRegistroEstudianteActividadPeriodo.getDataSetEstudiantesAsistencia(i, periodoActual, semanaSeleccionada);
             dgEstudiantesEnActividad.AutoGenerateColumns = true;
             dgEstudiantesEnActividad.DataSource = t;
             dgEstudiantesEnActividad.Columns[0].Visible = false;

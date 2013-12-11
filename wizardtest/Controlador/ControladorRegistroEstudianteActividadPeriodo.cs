@@ -30,7 +30,10 @@ namespace wizardtest.Controlador
         {
             return SerializadorRegistroEstudianteActividadPeriodo.getListadoEstudiantes(idActividad, idPeriodo);
         }
-
+        public static System.Data.DataTable getDataSetEstudiantesAsistencia(int idActividad, int idPeriodo,string semana)
+        {
+            return SerializadorRegistroEstudianteActividadPeriodo.getListadoEstudiantesSemana(idActividad, idPeriodo,semana);
+        }
         public static System.Data.DataTable getDataSetEstudiantesNoRegistrados(int idPeriodo)
         {
             return SerializadorRegistroEstudianteActividadPeriodo.getListadoEstudiantesNoRegistrados(idPeriodo);
