@@ -83,6 +83,7 @@ namespace wizardtest.Vistas
 
         private void buttonEliminar_Click(object sender, EventArgs e)
         {
+            
             int id;
             if (Int32.TryParse(textBoxIdActividad.Text, out id))
             {

@@ -48,11 +48,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.textBoxIdActividad = new System.Windows.Forms.TextBox();
             this.btnLimpiarCampos = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActividades)).BeginInit();
             this.SuspendLayout();
             // 
             // comboBoxDia
             // 
+            this.comboBoxDia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxDia.FormattingEnabled = true;
             this.comboBoxDia.Items.AddRange(new object[] {
             "Lunes",
@@ -66,20 +68,25 @@
             this.comboBoxDia.Name = "comboBoxDia";
             this.comboBoxDia.Size = new System.Drawing.Size(121, 21);
             this.comboBoxDia.TabIndex = 28;
-            this.comboBoxDia.Text = "Lunes";
             // 
             // dataGridViewActividades
             // 
+            this.dataGridViewActividades.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridViewActividades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewActividades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewActividades.Location = new System.Drawing.Point(238, 52);
+            this.dataGridViewActividades.Location = new System.Drawing.Point(153, 52);
+            this.dataGridViewActividades.MaximumSize = new System.Drawing.Size(1200, 315);
             this.dataGridViewActividades.Name = "dataGridViewActividades";
-            this.dataGridViewActividades.Size = new System.Drawing.Size(418, 206);
+            this.dataGridViewActividades.Size = new System.Drawing.Size(570, 315);
             this.dataGridViewActividades.TabIndex = 27;
             this.dataGridViewActividades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActividades_CellContentClick);
             this.dataGridViewActividades.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActividades_RowEnter);
             // 
             // comboBoxTipo
             // 
+            this.comboBoxTipo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxTipo.FormattingEnabled = true;
             this.comboBoxTipo.Location = new System.Drawing.Point(14, 133);
             this.comboBoxTipo.Name = "comboBoxTipo";
@@ -88,6 +95,7 @@
             // 
             // comboBoxEstado
             // 
+            this.comboBoxEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBoxEstado.FormattingEnabled = true;
             this.comboBoxEstado.Location = new System.Drawing.Point(14, 186);
             this.comboBoxEstado.Name = "comboBoxEstado";
@@ -139,8 +147,9 @@
             // 
             // buttonEliminar
             // 
+            this.buttonEliminar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEliminar.Location = new System.Drawing.Point(520, 383);
+            this.buttonEliminar.Location = new System.Drawing.Point(587, 462);
             this.buttonEliminar.Name = "buttonEliminar";
             this.buttonEliminar.Size = new System.Drawing.Size(136, 30);
             this.buttonEliminar.TabIndex = 31;
@@ -150,8 +159,9 @@
             // 
             // buttonModificar
             // 
+            this.buttonModificar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonModificar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonModificar.Location = new System.Drawing.Point(520, 340);
+            this.buttonModificar.Location = new System.Drawing.Point(587, 426);
             this.buttonModificar.Name = "buttonModificar";
             this.buttonModificar.Size = new System.Drawing.Size(136, 30);
             this.buttonModificar.TabIndex = 30;
@@ -161,8 +171,9 @@
             // 
             // buttonAdicionar
             // 
+            this.buttonAdicionar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.buttonAdicionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdicionar.Location = new System.Drawing.Point(520, 300);
+            this.buttonAdicionar.Location = new System.Drawing.Point(587, 389);
             this.buttonAdicionar.Name = "buttonAdicionar";
             this.buttonAdicionar.Size = new System.Drawing.Size(136, 30);
             this.buttonAdicionar.TabIndex = 29;
@@ -221,7 +232,7 @@
             // 
             // textBoxIdActividad
             // 
-            this.textBoxIdActividad.Location = new System.Drawing.Point(137, 12);
+            this.textBoxIdActividad.Location = new System.Drawing.Point(75, 12);
             this.textBoxIdActividad.Name = "textBoxIdActividad";
             this.textBoxIdActividad.Size = new System.Drawing.Size(52, 20);
             this.textBoxIdActividad.TabIndex = 38;
@@ -238,11 +249,21 @@
             this.btnLimpiarCampos.UseVisualStyleBackColor = true;
             this.btnLimpiarCampos.Click += new System.EventHandler(this.btnLimpiarCampos_Click);
             // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(153, 33);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.TabIndex = 40;
+            this.label8.Text = "Lista Actividades";
+            // 
             // FormActividad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(673, 440);
+            this.ClientSize = new System.Drawing.Size(735, 497);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.btnLimpiarCampos);
             this.Controls.Add(this.textBoxIdActividad);
             this.Controls.Add(this.textBoxUbicacion);
@@ -263,6 +284,8 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximumSize = new System.Drawing.Size(1920, 535);
+            this.MinimumSize = new System.Drawing.Size(689, 478);
             this.Name = "FormActividad";
             this.Text = "FormActividad";
             this.Load += new System.EventHandler(this.FormActividad_Load);
@@ -294,5 +317,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBoxIdActividad;
         private System.Windows.Forms.Button btnLimpiarCampos;
+        private System.Windows.Forms.Label label8;
     }
 }

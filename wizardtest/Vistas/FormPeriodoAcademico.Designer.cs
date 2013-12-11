@@ -63,6 +63,7 @@
             // txtAnio
             // 
             this.txtAnio.Location = new System.Drawing.Point(22, 93);
+            this.txtAnio.MaxLength = 4;
             this.txtAnio.Name = "txtAnio";
             this.txtAnio.Size = new System.Drawing.Size(134, 20);
             this.txtAnio.TabIndex = 20;
@@ -132,6 +133,7 @@
             // txtSigla
             // 
             this.txtSigla.Location = new System.Drawing.Point(22, 139);
+            this.txtSigla.MaxLength = 10;
             this.txtSigla.Name = "txtSigla";
             this.txtSigla.Size = new System.Drawing.Size(134, 20);
             this.txtSigla.TabIndex = 23;

@@ -33,13 +33,13 @@
             this.dgEstudiantes = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.cbActividadesPeriodo = new System.Windows.Forms.ComboBox();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgEstudiantesEnActividad = new System.Windows.Forms.DataGridView();
             this.btnGuardarLista = new System.Windows.Forms.Button();
             this.btnQuitarEstudianteSeleccionado = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgActividadesPeriodo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantesEnActividad)).BeginInit();
             this.SuspendLayout();
             // 
             // dgActividadesPeriodo
@@ -65,10 +65,10 @@
             // 
             this.dgEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgEstudiantes.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgEstudiantes.Location = new System.Drawing.Point(244, 49);
+            this.dgEstudiantes.Location = new System.Drawing.Point(12, 49);
             this.dgEstudiantes.Name = "dgEstudiantes";
             this.dgEstudiantes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgEstudiantes.Size = new System.Drawing.Size(343, 209);
+            this.dgEstudiantes.Size = new System.Drawing.Size(575, 209);
             this.dgEstudiantes.TabIndex = 2;
             // 
             // label2
@@ -88,14 +88,17 @@
             this.cbActividadesPeriodo.Name = "cbActividadesPeriodo";
             this.cbActividadesPeriodo.Size = new System.Drawing.Size(199, 21);
             this.cbActividadesPeriodo.TabIndex = 4;
+            this.cbActividadesPeriodo.SelectedIndexChanged += new System.EventHandler(this.cbActividadesPeriodo_SelectedIndexChanged);
+            this.cbActividadesPeriodo.SelectedValueChanged += new System.EventHandler(this.cbActividadesPeriodo_SelectedValueChanged);
             // 
-            // dataGridView3
+            // dgEstudiantesEnActividad
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(244, 300);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(343, 109);
-            this.dataGridView3.TabIndex = 5;
+            this.dgEstudiantesEnActividad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgEstudiantesEnActividad.Location = new System.Drawing.Point(244, 300);
+            this.dgEstudiantesEnActividad.Name = "dgEstudiantesEnActividad";
+            this.dgEstudiantesEnActividad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgEstudiantesEnActividad.Size = new System.Drawing.Size(343, 109);
+            this.dgEstudiantesEnActividad.TabIndex = 5;
             // 
             // btnGuardarLista
             // 
@@ -103,8 +106,9 @@
             this.btnGuardarLista.Name = "btnGuardarLista";
             this.btnGuardarLista.Size = new System.Drawing.Size(199, 36);
             this.btnGuardarLista.TabIndex = 6;
-            this.btnGuardarLista.Text = "Guardar Lista";
+            this.btnGuardarLista.Text = "Adicionar Estudiante a Actividad";
             this.btnGuardarLista.UseVisualStyleBackColor = true;
+            this.btnGuardarLista.Click += new System.EventHandler(this.btnGuardarLista_Click);
             // 
             // btnQuitarEstudianteSeleccionado
             // 
@@ -114,11 +118,12 @@
             this.btnQuitarEstudianteSeleccionado.TabIndex = 7;
             this.btnQuitarEstudianteSeleccionado.Text = "Quitar seleccionado";
             this.btnQuitarEstudianteSeleccionado.UseVisualStyleBackColor = true;
+            this.btnQuitarEstudianteSeleccionado.Click += new System.EventHandler(this.btnQuitarEstudianteSeleccionado_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(241, 30);
+            this.label3.Location = new System.Drawing.Point(12, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(227, 13);
             this.label3.TabIndex = 8;
@@ -132,7 +137,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnQuitarEstudianteSeleccionado);
             this.Controls.Add(this.btnGuardarLista);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.dgEstudiantesEnActividad);
             this.Controls.Add(this.cbActividadesPeriodo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgEstudiantes);
@@ -143,7 +148,7 @@
             this.Load += new System.EventHandler(this.FormRegistroEstudianteActividadPeriodo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgActividadesPeriodo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantesEnActividad)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -156,7 +161,7 @@
         private System.Windows.Forms.DataGridView dgEstudiantes;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbActividadesPeriodo;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgEstudiantesEnActividad;
         private System.Windows.Forms.Button btnGuardarLista;
         private System.Windows.Forms.Button btnQuitarEstudianteSeleccionado;
         private System.Windows.Forms.Label label3;

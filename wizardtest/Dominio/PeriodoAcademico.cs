@@ -88,6 +88,26 @@ values(@idPeriodo,@Anio,@Semestre)";
             return resultado;
         }
 
+        public static PeriodoAcademico getPeriodo(int idPeriodo)
+        {
+            DataTable resultado = new DataTable();
+            try
+            {
+                SQLiteConnection conn = ConexionBD.getConexion();
+                conn.Open();
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT idPeriodo,Anio,Semestre from PeriodoAcademico WHERE idPeriodo="+idPeriodo+";", conn);
+                adaptador.Fill(resultado);
+                return new PeriodoAcademico(Convert.ToInt32(resultado.Rows[0]["idPeriodo"].ToString()),
+                    Convert.ToInt32(resultado.Rows[0]["Anio"].ToString()),
+                    resultado.Rows[0]["Semestre"].ToString());
+            }
+            catch (Exception ex)
+            {
+                string tes = ex.Message;
+            }
+            return null;
+        }
+
         public static DataTable getListadoConcat()
         {
             DataTable resultado = new DataTable();

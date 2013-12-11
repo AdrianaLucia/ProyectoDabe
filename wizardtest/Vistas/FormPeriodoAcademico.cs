@@ -38,8 +38,16 @@ namespace wizardtest.Vistas
             }
             else
             {
-                Controlador.ControladorPeriodoAcademico.adicionar(Int32.Parse(txtAnio.Text),txtSigla.Text);
-                llenarDataSet();
+                int anio = Int32.Parse(txtAnio.Text);
+                if (anio < 2012 || anio > 2020)
+                {
+                    MessageBox.Show("El año no esta en el rango valido (2012-2020)");
+                }
+                else
+                {
+                    Controlador.ControladorPeriodoAcademico.adicionar(anio, txtSigla.Text);
+                    llenarDataSet();
+                }
             }
         }
 

@@ -95,7 +95,9 @@ values(@id,@idEstudiante,@idActividad,@idPeriodo)";
             DataTable resultado = new DataTable();
             SQLiteConnection conn = ConexionBD.getConexion();
             conn.Open();
-            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM RegistroEstudianteActividadPeriodo where idPeriodo="+idPeriodo+" AND idActividad="+idActividad+";", conn);
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter(@"SELECT REAP.id as id, ES.NroRegistro as NumeroRegistro ,(ES.Nombres||' '||ES.ApellidoPaterno||' '||ES.ApellidoMaterno) as Nombre
+                                                                    FROM RegistroEstudianteActividadPeriodo REAP,Estudiante ES 
+                                                                    WHERE ES.idEstudiante=REAP.idEstudiante AND idPeriodo=" + idPeriodo+" AND idActividad="+idActividad+";", conn);
             adaptador.Fill(resultado);
             return resultado;
         }
@@ -105,7 +107,7 @@ values(@id,@idEstudiante,@idActividad,@idPeriodo)";
             DataTable resultado = new DataTable();
             SQLiteConnection conn = ConexionBD.getConexion();
             conn.Open();
-            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM Estudiante where idEstudiante NOT IN (SELECT idEstudiante from RegistroEstudianteActividadPeriodo where idPeriodo=" + idPeriodo + ")s;", conn);
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM Estudiante where idEstudiante NOT IN (SELECT idEstudiante from RegistroEstudianteActividadPeriodo where idPeriodo=" + idPeriodo + ");", conn);
             adaptador.Fill(resultado);
             return resultado;
         }
