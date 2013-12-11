@@ -73,9 +73,15 @@ namespace wizardtest.Vistas
             DateTime finSemana = inicioSemana.AddDays(6);
             lblSemana.Text = inicioSemana.ToString("dd-MM") + " al " + finSemana.ToString("dd-MM");
             semanaSeleccionada = inicioSemana.ToString("yy-MM-dd");
+            RefrescarListas();
         }
 
         private void dgActividades_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            RefrescarListas(); 
+        }
+
+        private void RefrescarListas()
         {
             int idActividad = -1;
             if (dgActividades.SelectedRows.Count > 0)
@@ -86,6 +92,22 @@ namespace wizardtest.Vistas
                     actualizarListaEstudiantesActividad(idActividad);
                 }
             }
+        }
+
+        private void btnAsistencia_Click(object sender, EventArgs e)
+        {
+            int idReapSeleccionado = -1;
+            if (dgEstudiantesEnActividad.SelectedRows.Count > 0)
+            {
+                string valorEnCelda = dgEstudiantesEnActividad.SelectedRows[0].Cells["id"].Value.ToString();
+                int AsistenciaActual = Convert.ToInt32(dgEstudiantesEnActividad.SelectedRows[0].Cells["Asistio"].Value.ToString());
+                if (Int32.TryParse(valorEnCelda, out idReapSeleccionado))
+                {
+                    Controlador.ControladorAsistencia.crearReemplazar(idReapSeleccionado, 1 - AsistenciaActual, semanaSeleccionada);
+                }
+            }
+            RefrescarListas();
+            
         }
     }
 }

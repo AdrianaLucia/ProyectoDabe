@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblSemana = new System.Windows.Forms.Label();
+            this.btnAsistencia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgActividades)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantesEnActividad)).BeginInit();
             this.SuspendLayout();
@@ -63,7 +64,7 @@
             this.dgEstudiantesEnActividad.MultiSelect = false;
             this.dgEstudiantesEnActividad.Name = "dgEstudiantesEnActividad";
             this.dgEstudiantesEnActividad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgEstudiantesEnActividad.Size = new System.Drawing.Size(306, 262);
+            this.dgEstudiantesEnActividad.Size = new System.Drawing.Size(313, 262);
             this.dgEstudiantesEnActividad.TabIndex = 1;
             // 
             // label1
@@ -124,11 +125,22 @@
             this.lblSemana.TabIndex = 7;
             this.lblSemana.Text = "-";
             // 
+            // btnAsistencia
+            // 
+            this.btnAsistencia.Location = new System.Drawing.Point(287, 396);
+            this.btnAsistencia.Name = "btnAsistencia";
+            this.btnAsistencia.Size = new System.Drawing.Size(312, 23);
+            this.btnAsistencia.TabIndex = 8;
+            this.btnAsistencia.Text = "Cambiar Asistencia Seleccionado";
+            this.btnAsistencia.UseVisualStyleBackColor = true;
+            this.btnAsistencia.Click += new System.EventHandler(this.btnAsistencia_Click);
+            // 
             // FormRegistroAsistencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(605, 452);
+            this.ClientSize = new System.Drawing.Size(612, 452);
+            this.Controls.Add(this.btnAsistencia);
             this.Controls.Add(this.lblSemana);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -159,5 +171,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblSemana;
+        private System.Windows.Forms.Button btnAsistencia;
     }
 }

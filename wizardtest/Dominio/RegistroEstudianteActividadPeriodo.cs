@@ -135,7 +135,7 @@ id INTEGER PRIMARY KEY AUTOINCREMENT,idEstudiante INTEGER,idActividad INTEGER,id
             SQLiteConnection conn = ConexionBD.getConexion();
             conn.Open();
             SQLiteDataAdapter adaptador = new SQLiteDataAdapter(@"SELECT REAP.id as id, ES.NroRegistro as NumeroRegistro ,(ES.Nombres||' '||ES.ApellidoPaterno||' '||ES.ApellidoMaterno) "+
-                                                                    " as Nombre, IFNULL((SELECT Asistio FROM Asistencia ASIS where ASIS.idREAP=REAP.id AND ASIS.Fecha='+"+semana+@"+'),'0') as Asistio "+
+                                                                    " as Nombre, IFNULL((SELECT Asistio FROM Asistencia ASIS where ASIS.idREAP=REAP.id AND ASIS.Fecha='"+semana+"'),'0') as Asistio "+
                                                                     "FROM RegistroEstudianteActividadPeriodo REAP,Estudiante ES "+
                                                                     "WHERE ES.idEstudiante=REAP.idEstudiante AND idPeriodo=" + idPeriodo + " AND idActividad=" + idActividad + ";", conn);
             adaptador.Fill(resultado);
