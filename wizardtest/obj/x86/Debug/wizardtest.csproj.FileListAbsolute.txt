@@ -72,3 +72,4 @@ D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.Splash.resources
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormSplash.resources
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRegistroPromedio.resources
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.Reportes.resources
+D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.csproj.ResolveComReference.cache

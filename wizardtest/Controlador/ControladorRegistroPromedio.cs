@@ -31,6 +31,10 @@ namespace wizardtest.Controlador
         {
             return SerializadorRegistroPromedios.getListadoPorPeriodoIAA(idPer);
         }
+        public static System.Data.DataTable getDataSetTodosMenoProm(int idPer)
+        {
+            return SerializadorRegistroPromedios.getListadoPorPeriodoIAAMenorAPromCarrera(idPer);
+        }
         
          
 

@@ -26,6 +26,19 @@ namespace wizardtest.Vistas
             dgEstudiantes.AutoGenerateColumns = true;
             dgEstudiantes.DataSource = t;
             dgEstudiantes.Columns[0].Visible = false;
+
+        }
+          public void LlenarDataSetIAAMenorProm()
+        {
+            int idPeriodoActual = Properties.Settings.Default.id;
+            if (idPeriodoActual == -1)
+                MessageBox.Show("Periodo no seleccionado");
+
+
+            System.Data.DataTable t = Controlador.ControladorRegistroPromedio.getDataSetTodosMenoProm(idPeriodoActual);
+            dgEstudiantes.AutoGenerateColumns = true;
+            dgEstudiantes.DataSource = t;
+            dgEstudiantes.Columns[0].Visible = false;
             
         }
         private void Reportes_Load(object sender, EventArgs e)
@@ -41,12 +54,30 @@ namespace wizardtest.Vistas
 
         private void button2_Click(object sender, EventArgs e)
         {
-            LlenarDataSet();
+            LlenarDataSetIAAMenorProm();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             LlenarDataSet();
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            printDocument1.Print();
+        }
+
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            PaintEventArgs m = new PaintEventArgs(e.Graphics, new Rectangle(new Point(0, 0), this.Size));
+            this.InvokePaint(dgEstudiantes, m);
+        }
+
+        private void btnExcel_Click(object sender, EventArgs e)
+        {
+            ExportToExcel ex = new ExportToExcel();
+            ex.dt = dgEstudiantes;
+            ex.exportToExcel();
         }
     }
 }

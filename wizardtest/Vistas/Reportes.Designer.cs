@@ -35,6 +35,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.btnPrint = new System.Windows.Forms.Button();
+            this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.btnExcel = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgEstudiantes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,9 +47,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgEstudiantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgEstudiantes.Location = new System.Drawing.Point(157, 12);
+            this.dgEstudiantes.Location = new System.Drawing.Point(157, 34);
             this.dgEstudiantes.Name = "dgEstudiantes";
-            this.dgEstudiantes.Size = new System.Drawing.Size(440, 282);
+            this.dgEstudiantes.Size = new System.Drawing.Size(518, 393);
             this.dgEstudiantes.TabIndex = 0;
             // 
             // label1
@@ -105,11 +108,37 @@
             this.button4.Text = "Detalle de estudiante seleccionado";
             this.button4.UseVisualStyleBackColor = true;
             // 
+            // btnPrint
+            // 
+            this.btnPrint.Location = new System.Drawing.Point(597, 5);
+            this.btnPrint.Name = "btnPrint";
+            this.btnPrint.Size = new System.Drawing.Size(75, 23);
+            this.btnPrint.TabIndex = 7;
+            this.btnPrint.Text = "Imprimir";
+            this.btnPrint.UseVisualStyleBackColor = true;
+            this.btnPrint.Click += new System.EventHandler(this.btnPrint_Click);
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // btnExcel
+            // 
+            this.btnExcel.Location = new System.Drawing.Point(465, 5);
+            this.btnExcel.Name = "btnExcel";
+            this.btnExcel.Size = new System.Drawing.Size(126, 23);
+            this.btnExcel.TabIndex = 8;
+            this.btnExcel.Text = "Exportar Excel";
+            this.btnExcel.UseVisualStyleBackColor = true;
+            this.btnExcel.Click += new System.EventHandler(this.btnExcel_Click);
+            // 
             // Reportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(606, 309);
+            this.ClientSize = new System.Drawing.Size(684, 442);
+            this.Controls.Add(this.btnExcel);
+            this.Controls.Add(this.btnPrint);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -117,6 +146,7 @@
             this.Controls.Add(this.cbEstadoEstudiante);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgEstudiantes);
+            this.MinimumSize = new System.Drawing.Size(700, 480);
             this.Name = "Reportes";
             this.Text = "Reportes";
             this.Load += new System.EventHandler(this.Reportes_Load);
@@ -135,5 +165,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnPrint;
+        private System.Drawing.Printing.PrintDocument printDocument1;
+        private System.Windows.Forms.Button btnExcel;
     }
 }
