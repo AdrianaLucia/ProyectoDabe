@@ -82,6 +82,7 @@ namespace wizardtest.Vistas
                 Controlador.ControladorEstudiante.adicionar(textBoxRegistroEstudiante.Text, textBoxNombre.Text, textBoxApPat.Text, textBoxApMat.Text, comboBoxFacultad.SelectedItem.ToString(), Int32.Parse(comboBoxCarrera.SelectedValue.ToString()), Int32.Parse(comboEstadoEstudiante.SelectedValue.ToString()), usoCondicio);
             }
             LlenarDataSet();
+            limpiarCampos();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -101,6 +102,7 @@ namespace wizardtest.Vistas
             {
             }
             LlenarDataSet();
+            limpiarCampos();
         }
 
         private void button2_Click(object sender, EventArgs e)

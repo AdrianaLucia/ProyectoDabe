@@ -57,7 +57,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(234, 418);
+            this.button1.Location = new System.Drawing.Point(121, 418);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(107, 23);
             this.button1.TabIndex = 48;
@@ -77,9 +77,9 @@
             // 
             // btnCrearNuevo
             // 
-            this.btnCrearNuevo.Location = new System.Drawing.Point(121, 418);
+            this.btnCrearNuevo.Location = new System.Drawing.Point(234, 415);
             this.btnCrearNuevo.Name = "btnCrearNuevo";
-            this.btnCrearNuevo.Size = new System.Drawing.Size(107, 23);
+            this.btnCrearNuevo.Size = new System.Drawing.Size(109, 28);
             this.btnCrearNuevo.TabIndex = 46;
             this.btnCrearNuevo.Text = "Crear nuevo";
             this.btnCrearNuevo.UseVisualStyleBackColor = true;
@@ -104,6 +104,8 @@
             // 
             // dataGridListaUsuarios
             // 
+            this.dataGridListaUsuarios.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridListaUsuarios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridListaUsuarios.Location = new System.Drawing.Point(234, 12);
             this.dataGridListaUsuarios.Name = "dataGridListaUsuarios";

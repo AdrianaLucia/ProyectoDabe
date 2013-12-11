@@ -67,12 +67,14 @@
     <Compile Include="Controlador\ControladorPromedioPeriodo.cs" />
     <Compile Include="Controlador\ControladorRegistroAsistencia.cs" />
     <Compile Include="Controlador\ControladorRegistroEstudianteActividadPeriodo.cs" />
+    <Compile Include="Controlador\ControladorRegistroPromedio.cs" />
     <Compile Include="Controlador\ControladorRolUsuario.cs" />
     <Compile Include="Controlador\ControladorTipoActividad.cs" />
     <Compile Include="Controlador\ControladorUsuario.cs" />
     <Compile Include="Controlador\GestionEstudiante.cs" />
     <Compile Include="Controlador\GestionFacultad.cs" />
-    <Compile Include="Controlador\RegistroPromedios.cs" />
+    <Compile Include="CSVParser.cs" />
+    <Compile Include="Dominio\RegistroPromedios.cs" />
     <Compile Include="Dominio\Actividad.cs" />
     <Compile Include="Dominio\ActividadPeriodo.cs" />
     <Compile Include="Dominio\Asistencia.cs" />
@@ -84,7 +86,7 @@
     <Compile Include="Dominio\PeriodoAcademico.cs" />
     <Compile Include="Dominio\Persona.cs" />
     <Compile Include="Dominio\PromedioPeriodo.cs" />
-    <Compile Include="Vistas\RegistroAsistencia.cs" />
+    <Compile Include="Dominio\RegistroAsistencia.cs" />
     <Compile Include="Dominio\RegistroEstudianteActividadPeriodo.cs" />
     <Compile Include="Dominio\RolUsuario.cs" />
     <Compile Include="Dominio\TipoActividad.cs" />
@@ -151,6 +153,12 @@
     </Compile>
     <Compile Include="Vistas\FormRegistroEstudianteActividadPeriodo.Designer.cs">
       <DependentUpon>FormRegistroEstudianteActividadPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vistas\FormRegistroPromedio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\FormRegistroPromedio.Designer.cs">
+      <DependentUpon>FormRegistroPromedio.cs</DependentUpon>
     </Compile>
     <Compile Include="Vistas\FormRolUsuario.cs">
       <SubType>Form</SubType>
@@ -220,6 +228,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormRegistroEstudianteActividadPeriodo.resx">
       <DependentUpon>FormRegistroEstudianteActividadPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\FormRegistroPromedio.resx">
+      <DependentUpon>FormRegistroPromedio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormRolUsuario.resx">
       <DependentUpon>FormRolUsuario.cs</DependentUpon>

@@ -34,6 +34,9 @@ namespace wizardtest.Vistas
                 Controlador.ControladorCarrera.adicionar(textBoxNombreCarrera.Text, Int32.Parse(textBoxCodCarrera.Text),comboBoxFacultad.SelectedItem.ToString());
                 llenarDataSet();
             }
+            textBoxCodCarrera.Text = "";
+            textBoxidCarrera.Text = "";
+            textBoxNombreCarrera.Text = "";
         }
 
 
@@ -51,6 +54,9 @@ namespace wizardtest.Vistas
                 MessageBox.Show("No esta seleccionado ningun Estado Actividad");
             }
             llenarDataSet();
+            textBoxCodCarrera.Text = "";
+            textBoxidCarrera.Text = "";
+            textBoxNombreCarrera.Text = "";
         }
 
         private void llenarDataSet()
@@ -76,25 +82,35 @@ namespace wizardtest.Vistas
                 llenarDataSet();
                 textBoxidCarrera.Clear();
             }
+            textBoxCodCarrera.Text = "";
+            textBoxidCarrera.Text = "";
+            textBoxNombreCarrera.Text = "";
         }
 
         private void dataGridViewEstados_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
-            textBoxidCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[0].Value.ToString();
-            textBoxNombreCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[1
-                ].Value.ToString();
-            textBoxCodCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[2
-                ].Value.ToString();
-            comboBoxFacultad.SelectedItem = dgListaCarreras.Rows[e.RowIndex].Cells[3
-                ].Value.ToString();
+            if (dgListaCarreras.Rows[e.RowIndex].Cells[0].Value != null)
+            {
+                textBoxidCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[0].Value.ToString();
+                textBoxNombreCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[1
+                    ].Value.ToString();
+                textBoxCodCarrera.Text = dgListaCarreras.Rows[e.RowIndex].Cells[2
+                    ].Value.ToString();
+                comboBoxFacultad.SelectedItem = dgListaCarreras.Rows[e.RowIndex].Cells[3
+                    ].Value.ToString();
+            }
         }
 
         private void FormCarrera_Load(object sender, EventArgs e)
         {
+            
             comboBoxFacultad.SelectedIndex = 0;
             comboBoxFacultad.DropDownStyle = ComboBoxStyle.DropDownList;
 
             llenarDataSet();
+            textBoxCodCarrera.Text = "";
+            textBoxidCarrera.Text = "";
+            textBoxNombreCarrera.Text = "";
         }
 
     }

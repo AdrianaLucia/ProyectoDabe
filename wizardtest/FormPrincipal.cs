@@ -145,5 +145,11 @@ namespace wizardtest
         {
 
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form subir = new Vistas.FormRegistroPromedio();
+            subir.ShowDialog();
+        }
     }
 }

@@ -9,7 +9,7 @@ namespace wizardtest.Controlador
 {
     class RegistroPromedios
     {
-        public int NroRegistro { get; private set; }
+        public string NroRegistro { get; private set; }
         public int Periodo { get; private set; }
         public string Nombre { get; private set; }
         public int Carrera { get; private set; }
@@ -17,7 +17,7 @@ namespace wizardtest.Controlador
         public double IAA { get; private set; }
         public double IAP { get; private set; }
 
-        public RegistroPromedios(int pNroRegistro, int pPeriodo, string pNombre, int pCarrera, double pPromCarrera, int pIAA, int pIAP)
+        public RegistroPromedios(string pNroRegistro, int pPeriodo, string pNombre, int pCarrera, double pPromCarrera, int pIAA, int pIAP)
         {
             NroRegistro = pNroRegistro;
             Periodo = pPeriodo;
@@ -114,7 +114,7 @@ values(@NroRegistro,@Periodo,@Nombre,@Carrera,@PromCarrera,@IAA,@IAP)";
             {
                 con.Open();
                 SQLiteCommand adicion = new SQLiteCommand(con);
-                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS RegistroPromedios (NroRegistro INTEGER ,Periodo INTEGER,Nombre TEXT,Carrera INTEGER,PromCarrera REAL,IAA INTEGER,IAP INTEGER ,PRIMARY KEY(NroRegistro,Periodo) );";
+                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS RegistroPromedios (NroRegistro TEXT ,Periodo INTEGER,Nombre TEXT,Carrera INTEGER,PromCarrera REAL,IAA INTEGER,IAP INTEGER ,PRIMARY KEY(NroRegistro,Periodo) );";
                 adicion.ExecuteNonQuery();
             }
         }
