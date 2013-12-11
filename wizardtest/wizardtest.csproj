@@ -184,6 +184,12 @@
     <Compile Include="Vistas\FormUsuario.Designer.cs">
       <DependentUpon>FormUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vistas\Reportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vistas\Reportes.Designer.cs">
+      <DependentUpon>Reportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vistas\Splash.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\FormUsuario.resx">
       <DependentUpon>FormUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vistas\Reportes.resx">
+      <DependentUpon>Reportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vistas\Splash.resx">
       <DependentUpon>Splash.cs</DependentUpon>

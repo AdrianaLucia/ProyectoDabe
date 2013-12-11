@@ -26,6 +26,7 @@ namespace wizardtest.Controlador
         {
             return SerializadorEstudiante.getListado();
         }
+     
 
 
         internal static bool modificar(int id, string pNroRegistro, string pNombres, string pApellidoPaterno, string pApellidoMaterno, string pFacultad, int pCarrera, int pEstadoEstudiante, int pUsoCondicionEspecial)

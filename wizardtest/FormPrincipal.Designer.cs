@@ -256,8 +256,9 @@
             this.btnReportes.Name = "btnReportes";
             this.btnReportes.Size = new System.Drawing.Size(190, 46);
             this.btnReportes.TabIndex = 64;
-            this.btnReportes.Text = "Subir archivo promedios";
+            this.btnReportes.Text = "REPORTES";
             this.btnReportes.UseVisualStyleBackColor = true;
+            this.btnReportes.Click += new System.EventHandler(this.btnReportes_Click);
             // 
             // FormPrincipal
             // 

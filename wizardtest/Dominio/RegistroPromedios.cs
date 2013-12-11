@@ -106,7 +106,15 @@ values(@NroRegistro,@Periodo,@Nombre,@Carrera,@PromCarrera,@IAA,@IAP)";
             adaptador.Fill(resultado);
             return resultado;
         }
-
+        public static DataTable getListadoPorPeriodoIAA(int idPeriodo)
+        {
+            DataTable resultado = new DataTable();
+            SQLiteConnection conn = ConexionBD.getConexion();
+            conn.Open();
+            SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * FROM RegistroPromedios WHERE Periodo='"+idPeriodo+"' ORDER BY IAA;", conn);
+            adaptador.Fill(resultado);
+            return resultado;
+        }
 
         static void crearTablaSiNoExiste()
         {

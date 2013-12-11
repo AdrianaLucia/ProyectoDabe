@@ -27,7 +27,12 @@ namespace wizardtest.Controlador
         {
             return SerializadorRegistroPromedios.getListado();
         }
-
+        public static System.Data.DataTable getDataSetTodos(int idPer)
+        {
+            return SerializadorRegistroPromedios.getListadoPorPeriodoIAA(idPer);
+        }
+        
+         
 
         internal static bool modificar(string pNroRegistro, int pPeriodo, string pNombre, int pCarrera, double pPromCarrera, int pIAA, int pIAP)
         {
