@@ -6,13 +6,15 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
+using wizardtest.Dominio;
 namespace wizardtest.Vistas
 {
     public partial class Splash : Form
     {
-        public Splash()
+        public static Usuario usuario;
+        public Splash(ref Usuario usuario)
         {
+            //this.usuario = usuario;
             InitializeComponent();
         }
 
@@ -20,11 +22,29 @@ namespace wizardtest.Vistas
         {
 
         }
-
+        private static int intentos = 0;
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-
-            this.DialogResult = DialogResult.OK;
+            string nick = txtNick.Text;
+            string pw = txtPass.Text;
+            if (nick == "" || pw == "")
+            {
+                MessageBox.Show("Ingrese una cuenta de usuario y su password");
+            }
+            else
+            {
+                usuario = SerializadorUsuario.getUsuario(nick, pw);
+                if (usuario == null || usuario.Password != pw.Trim())
+                {
+                    MessageBox.Show("Datos erroneos");
+                    intentos++;
+                }
+                if (usuario.Password == pw.Trim())
+                {
+                    this.DialogResult = DialogResult.OK;
+                    this.Close();
+                }   
+            }
         }
     }
 }

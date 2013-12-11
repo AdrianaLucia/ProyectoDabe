@@ -92,9 +92,21 @@ namespace wizardtest
         {
            
         }
+        
         private bool yaCargo = false;
+        public static Dominio.Usuario UsuarioActual = null;
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
+            UsuarioActual = null;
+            Form splash = new Vistas.Splash(ref UsuarioActual);
+            DialogResult dr=  splash.ShowDialog();
+            if (dr==DialogResult.OK)
+            {
+                UsuarioActual = Vistas.Splash.usuario;
+                MessageBox.Show("Bienvenid@: "+UsuarioActual.Nombre);
+            }
+
+            if (dr != DialogResult.OK) this.Close();
             yaCargo = false;
             DataTable listaEstados = Controlador.ControladorPeriodoAcademico.getDataSetTodosTexto();
             comboBox1.DataSource = listaEstados;

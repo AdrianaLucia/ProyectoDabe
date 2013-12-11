@@ -84,7 +84,7 @@
     <Compile Include="Dominio\PeriodoAcademico.cs" />
     <Compile Include="Dominio\Persona.cs" />
     <Compile Include="Dominio\PromedioPeriodo.cs" />
-    <Compile Include="Dominio\RegistroAsistencia.cs" />
+    <Compile Include="Vistas\RegistroAsistencia.cs" />
     <Compile Include="Dominio\RegistroEstudianteActividadPeriodo.cs" />
     <Compile Include="Dominio\RolUsuario.cs" />
     <Compile Include="Dominio\TipoActividad.cs" />

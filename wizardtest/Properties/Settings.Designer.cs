@@ -34,5 +34,17 @@ namespace wizardtest.Properties {
                 this["id"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string usuarioActual {
+            get {
+                return ((string)(this["usuarioActual"]));
+            }
+            set {
+                this["usuarioActual"] = value;
+            }
+        }
     }
 }

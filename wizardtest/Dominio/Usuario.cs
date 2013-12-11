@@ -8,7 +8,7 @@ using System.Data;
 
 namespace wizardtest.Dominio
 {
-    class Usuario
+    public class Usuario
     {
         public int idPersona { get; private set; }
         public string Nombre { get; private set; }
@@ -75,9 +75,9 @@ values(@Nombre,@ApPat,@ApMat,@Nick,@Password,@idRolUsuario,@Pregunta,@Respuesta)
             if (!inicializado) { init(); }
             int filasModificados = 0;
 
-            string comando = @"DELETE FROM Usuario WHERE Nombre =@cod";
+            string comando = @"DELETE FROM Usuario WHERE idPersona =@cod";
             SQLiteParameter[] p = new SQLiteParameter[1];
-            p[0] = new SQLiteParameter("@cod", e.Nombre);
+            p[0] = new SQLiteParameter("@cod", e.idPersona);
             filasModificados = ConexionBD.ejecutarCambio(comando, p);
 
 
@@ -108,6 +108,34 @@ values(@idPersona,@Nombre,@ApPat,@ApMat,@Nick,@Password,@idRolUsuario,@Pregunta,
 
             return filasAdicionadas > 0;
         }
+
+        public static Usuario getUsuario(string Nick, string PW)
+        {
+            DataTable resultado = new DataTable();
+            try
+            {
+                SQLiteConnection conn = ConexionBD.getConexion();
+                conn.Open();
+                SQLiteDataAdapter adaptador = new SQLiteDataAdapter("SELECT * from Usuario WHERE Nick='" + Nick + "';", conn);
+                adaptador.Fill(resultado);
+                if (resultado.Rows.Count == 0) return null;
+                return new Usuario(Convert.ToInt32(resultado.Rows[0]["idPersona"].ToString()),
+                    resultado.Rows[0]["Nombre"].ToString(),
+                    resultado.Rows[0]["ApPat"].ToString(),
+                    resultado.Rows[0]["ApMat"].ToString(),
+                    resultado.Rows[0]["Nick"].ToString(),
+                    resultado.Rows[0]["Password"].ToString(),
+                    Convert.ToInt32(resultado.Rows[0]["idRolUsuario"].ToString()),
+                    resultado.Rows[0]["Pregunta"].ToString(),
+                    resultado.Rows[0]["Respuesta"].ToString());   
+            }
+            catch (Exception ex)
+            {
+                string tes = ex.Message;
+            }
+            return null;
+        }
+
         public static DataTable getListado()
         {
             crearTablaSiNoExiste();

@@ -69,3 +69,4 @@ D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRegistroAsist
 D:\PNP\ProyectoDabe\wizardtest\bin\Debug\wizardtest.exe.config
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRegistroEstudianteActividadPeriodo.resources
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.Splash.resources
+D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormSplash.resources
