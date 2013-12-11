@@ -114,7 +114,7 @@ values(@NroRegistro,@Periodo,@Nombre,@Carrera,@PromCarrera,@IAA,@IAP)";
             {
                 con.Open();
                 SQLiteCommand adicion = new SQLiteCommand(con);
-                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS Asistencia (NroRegistro INTEGER ,Periodo INTEGER,Nombre TEXT,Carrera INTEGER,PromCarrera REAL,IAA INTEGER,IAP INTEGER ,PRIMARY KEY(NroRegistro,Periodo) );";
+                adicion.CommandText = @"CREATE TABLE IF NOT EXISTS RegistroPromedios (NroRegistro INTEGER ,Periodo INTEGER,Nombre TEXT,Carrera INTEGER,PromCarrera REAL,IAA INTEGER,IAP INTEGER ,PRIMARY KEY(NroRegistro,Periodo) );";
                 adicion.ExecuteNonQuery();
             }
         }

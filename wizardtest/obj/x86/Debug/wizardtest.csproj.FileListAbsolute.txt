@@ -68,3 +68,4 @@ D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.csproj.GenerateResource.
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRegistroAsistencia.resources
 D:\PNP\ProyectoDabe\wizardtest\bin\Debug\wizardtest.exe.config
 D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.FormRegistroEstudianteActividadPeriodo.resources
+D:\PNP\ProyectoDabe\wizardtest\obj\x86\Debug\wizardtest.Vistas.Splash.resources
